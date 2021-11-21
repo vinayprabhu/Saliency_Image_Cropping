@@ -1,9 +1,10 @@
-## Auditing Saliency Image Cropping {.tabset}
+## Auditing Saliency Image Cropping
 
 You can use the [editor on GitHub](https://github.com/vinayprabhu/Saliency_Image_Cropping/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 Test
+<button name="button">Click me</button>
 
 ### Markdown
 
