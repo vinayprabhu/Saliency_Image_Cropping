@@ -15,10 +15,10 @@ Choose your favorite subject:
 </form> -->
 
 
-<button onclick="location.href='https://github.com/vinayprabhu/Saliency_Image_Cropping/blob/gh-pages/john_apple.md'" type="button">
-         TEST</button>
-<button onclick="location.href='./tutorials/index.md'" type="button">
-         TEST2</button>
+<button onclick="location.href='./tutorials/create_table.ipynb'" type="button">
+         TEST_ipynb</button>
+         <button onclick="location.href='./tutorials/create_table.html'" type="button">
+         TEST_html</button>
 
 ### Markdown
 
