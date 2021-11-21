@@ -19,8 +19,7 @@ Choose your favorite subject:
          TEST_ipynb</button>
  <button onclick="location.href='./tutorials/create_table.html'" type="button">
          TEST_html</button>
-<button onclick="location.href='./tutorials/create_table.md'" type="button">
-         TEST_html</button>
+<button onclick="location.href='./tutorials/create_table.md'" type="button"> TEST_md</button>
 
 
 ### Markdown
