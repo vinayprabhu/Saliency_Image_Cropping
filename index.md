@@ -8,9 +8,15 @@ Test
 
 <form action="/action_page.php" method="get">
 Choose your favorite subject:
-<button name="subject" type="submit" value="HTML">HTML</button>
-<button name="subject" type="submit" value="CSS">CSS</button>
+<button name="subject" type="submit" value="Notebooks">HTML</button>
+  <button name="subject" type="submit" value="Timeline">HTML</button>
+<button name="subject" type="submit" value="Data">CSS</button>
+  <button name="subject" type="submit" value="ABSC">CSS</button>
 </form>
+
+
+<button onclick="location.href='https://github.com/vinayprabhu/Saliency_Image_Cropping/blob/gh-pages/john_apple.md'" type="button">
+         https://github.com/vinayprabhu/Saliency_Image_Cropping/blob/gh-pages/john_apple.md</button>
 
 ### Markdown
 
