@@ -16,7 +16,7 @@ Choose your favorite subject:
 
 
 <button onclick="location.href='https://github.com/vinayprabhu/Saliency_Image_Cropping/blob/gh-pages/john_apple.md'" type="button">
-         https://github.com/vinayprabhu/Saliency_Image_Cropping/blob/gh-pages/john_apple.md</button>
+         TEST</button>
 
 ### Markdown
 
