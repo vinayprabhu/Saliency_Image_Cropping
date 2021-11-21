@@ -4,7 +4,7 @@ You can use the [editor on GitHub](https://github.com/vinayprabhu/Saliency_Image
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 Test
-<h1>The button name attribute</h1>
+<!-- <h1>The button name attribute</h1>
 
 <form action="/action_page.php" method="get">
 Choose your favorite subject:
@@ -12,11 +12,13 @@ Choose your favorite subject:
   <button name="subject" type="submit" value="Timeline">HTML</button>
 <button name="subject" type="submit" value="Data">CSS</button>
   <button name="subject" type="submit" value="ABSC">CSS</button>
-</form>
+</form> -->
 
 
 <button onclick="location.href='https://github.com/vinayprabhu/Saliency_Image_Cropping/blob/gh-pages/john_apple.md'" type="button">
          TEST</button>
+<button onclick="location.href='./tutorials/index.md'" type="button">
+         TEST2</button>
 
 ### Markdown
 
