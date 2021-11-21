@@ -4,7 +4,13 @@ You can use the [editor on GitHub](https://github.com/vinayprabhu/Saliency_Image
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 Test
-<button name="button">Click me</button>
+<h1>The button name attribute</h1>
+
+<form action="/action_page.php" method="get">
+Choose your favorite subject:
+<button name="subject" type="submit" value="HTML">HTML</button>
+<button name="subject" type="submit" value="CSS">CSS</button>
+</form>
 
 ### Markdown
 
