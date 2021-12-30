@@ -1,0 +1,762 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Multimodal datasets, multimodal horrors </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="95090a1a-7bcd-47d5-9927-3805748c27d1" class="page sans"><header><img class="page-cover-image" src="images_mm/Ahinsa.jpg" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🤮</span></div><h1 class="page-title">Multimodal datasets, multimodal horrors </h1></header><div class="page-body"><p id="3992630e-1144-4657-be2b-e5170c4aac5d" class="">Authors: <em>Abeba Birhane, Emmanuel Kahembwe , Vinay Prabhu</em></p><p id="e89fd2e5-ae24-4fb5-837f-c38fbb1f8d5a" class=""><mark class="highlight-gray_background"><strong>Table of Contents:</strong></mark></p><nav id="b115ff13-adaa-4fcc-88b0-79423c96a4d3" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#55432e5c-2f1a-4f64-8c59-7b1e7549f07f">The &#x27;multimodality project&#x27; : A necessary pitstop towards &#x27;solving intelligence&#x27; and &#x27;AGI&#x27;</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#4f15795f-88ef-4af6-b4a6-dfa76d09e948">Then 2021 happened: CLIP, ALIGN and Wu Dao </a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#e8539ca9-a3c1-4e47-aa93-441351748a6b">Then LAION-400M happened. </a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#8b83043e-e8b6-4d43-9a3d-b64325679d0d">A whyness inquisition (Still working)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f247c0fe-2182-4da3-8a1b-1bc3237c900e">&quot;Closed-AI has been a meme for years!&quot;</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#e896c0a2-46d9-411c-96b0-a00fe8ce9db1">Why using CLIP based filtering can be dangerous!</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#e5dfc174-bd93-4387-897b-1d47b69c150a">Not us! It&#x27;s CLIP! It&#x27;s K-Means! It&#x27;s FAISS!</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#89cc80b7-8d75-43a6-b62b-cb41a5c907c9">A longitudinal inquisition into &#x27;Desi&#x27;</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0690dfe3-012a-461f-ae62-d77d10bd5370">Critiques of Large Scale Vision Datasets community</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#675cde70-4072-4523-918e-32584a92d192">Why then?</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#c672616c-46f4-4bf7-b1dd-569997afddbd">We are merely holding a mirror to the society.</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#64969307-661a-4180-b501-d351e6471e7a">Not us! It&#x27;s CLIP!</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d02193dd-da23-4264-9c42-0c5703c8baa9">Scale will &#x27;take care&#x27; of &#x27;noise&#x27;</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#8178e1b3-2831-469f-ac68-a64c3e1e8786">The fear of ANI</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#e0a72c37-4603-4011-95f2-97b49075a268">The two elephants in the room</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#fefaf511-528c-40ae-8b65-3baa92ab42b1">Google ALIGN and CLIP were both peer-reviewed</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#188a333a-3f07-4a02-91f6-79e3794b28bf">PFMV arguments:</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#3a2fa414-fa03-4611-a54a-e2a0e5506cdd">Ethicist&#x27; trauma dilemma</a></div></nav><h1 id="55432e5c-2f1a-4f64-8c59-7b1e7549f07f" class="">The &#x27;multimodality project&#x27; : A necessary pitstop towards &#x27;solving intelligence&#x27; and &#x27;AGI&#x27;</h1><p id="49a80b02-9d43-44d6-be58-5758ba00510a" class="">Simply put, the multi-modality narrative in Computer Vision has the following spiel: <em>Siloed attempts to create task-specific models for classification, segmentation, detection etc will only serve to create super-specialized brittle ANI (Artificial Narrow Intelligence) models. If we are to &#x27;solve intelligence&#x27; and achieve robust AGI (Artificial General Intelligence), we ought to be curating cross-domain datasets and training cross-domain models geared towards learning the nexus between the 3 modalities of Vision, Text and Speech</em>.</p><p id="f752bce2-4d96-4724-9107-96e19306e1c3" class="">In the specific context of the <em><strong>Vision-Text dyad</strong></em>, the endeavor begins with curating large-scale datasets of tuples of the form: <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo separator="true">,</mo><msub><mi>t</mi><mi>i</mi></msub><mo separator="true">,</mo><msub><mi>μ</mi><mi>i</mi></msub><mo stretchy="false">)</mo><msubsup><mo stretchy="false">}</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></msubsup></mrow><annotation encoding="application/x-tex">D=\{(x_i,t_i,\mu_i)\}_{i=1}^N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0999949999999998em;vertical-align:-0.258664em;"></span><span class="mopen">{(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose"><span class="mclose">}</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-2.441336em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.258664em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> where <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">x_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> is the <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>i</mi><mrow><mi>t</mi><mi>h</mi></mrow></msup></mrow><annotation encoding="application/x-tex">{i}^{th}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">i</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">h</span></span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> image, <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">t_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> is the textual description associated with the <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>i</mi><mrow><mi>t</mi><mi>h</mi></mrow></msup></mrow><annotation encoding="application/x-tex">{i}^{th}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">i</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">h</span></span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> image, and <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\mu_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> is the <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>i</mi><mrow><mi>t</mi><mi>h</mi></mrow></msup></mrow><annotation encoding="application/x-tex">{i}^{th}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">i</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">h</span></span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> image&#x27;s meta-data. This vertical of <em> multimodality pursuit</em> has been underway since 2010 with the arrival of the UIUC-PASCAL Sentence dataset. The year 2015 was in some ways the <em>annus mirabilis</em> that saw the emergence of four large scale initiatives: The Microsoft COCO: Common Objects in Context dataset (330,000 images with 5 independent human generated captions), the Yahoo Flickr Creative Commons 100 Million (YFCC100M) Dataset,  the Visual Question Answering (VQA dataset with 265016 images with at least 3 questions per image and 10 ground truth answers per question) and the Visual Genome (108,077 Images with 5.4 Million Region Descriptions and 1.7 Million Visual Question Answers) projects. These projects banked on a rough template of <em>carefully</em> crowd-sourced captioning of a pre-existent-image-dataset either by using platforms such as AMT or using photo-uploader captions from Flickr. </p><h2 id="4f15795f-88ef-4af6-b4a6-dfa76d09e948" class="">Then 2021 happened: CLIP, ALIGN and Wu Dao </h2><p id="3665fdbb-0b14-4b26-97c7-a11c939f7839" class="">The literal OGs of internet-sized-stealing-propelled large scale machine learning models, OpenAI and Google, trumpeted the release of 2 breakthrough models: CLIP (Contrastive Language-Image Pre-training) and ALIGN (A Large-scale ImaGe and Noisy-Text Embedding). These two endeavors broke ranks with the old recipe of handheld data curation and went after another recipe that would help scale their datasets into hundreds of millions or even billions: <em>loot-en-masse on the world-wide-web</em>. Armed with their web-sized scraping infrastructure, they merrily went after the billions of images on the internet paired with their &#x27;noisy&#x27; <a href="https://www.w3schools.com/tags/att_img_alt.asp">alt-text</a> descriptions. </p><p id="817e6989-8e86-4a78-bc06-0c80e67338f1" class="">OpenAI&#x27;s CLIP used an internally curated WIT (WebImageText) dataset consisting of 400 million (image, text) pairs collected form a variety of publicly available sources on the Internet. Their <a href="https://github.com/openai/CLIP/blob/main/model-card.md">model-card</a> documentation states that: “<em>The model was trained on publicly </em><a href="https://www.merriam-webster.com/dictionary/steal"><span style="border-bottom:0.05em solid"><strong><em>available</em></strong></span></a><em> image-caption data. This was done through a combination of crawling a handful of websites and using commonly-used pre-existing image datasets such as YFCC100M. A large portion of the data comes from our crawling of the internet</em>.” We get a little more insight into how the text captions were actually generated only via a <a href="https://github.com/openai/CLIP/issues/118#issuecomment-871263743">github-issue response</a> by a co-author where we encounter: “<em>The dataset is a mixture of image-text pairs from various sources. The &#x27;full text sequences&#x27; are usually title + description concatenated using whatever is available about the image, usually being a sentence or two and not the whole webpage.</em> “😒</p><p id="0728e97f-a391-436e-a935-67bee910a706" class="">Google&#x27;s ALIGN went one step further and created a billion-sized dataset whilst pulling off an even sinister slight of hand in marketing the complete paucity of thoughtful curation as freeing the community from the clutches of high curation costs: &quot;<em>This </em><a href="https://www.theverge.com/2021/7/27/22596592/google-q2-2021-record-revenue-profit-youtube-ad-cloud-search"><em>costly</em></a><em> curation process limits the size of datasets and hence hinders the scaling of trained models. In this paper, we leverage a noisy dataset of over one billion image alt-text pairs, obtained </em><strong><em>without </em></strong><a href="https://www.reuters.com/technology/google-parent-alphabet-beats-sales-estimates-ad-spending-soars-2021-04-27/"><strong><em>expensive</em></strong></a><strong><em> filtering or post-processing steps</em></strong><em> in the Conceptual Captions dataset</em>&quot;.🤬</p><p id="ae77c487-5c49-4c9c-bf63-b18e35b94cc6" class="">( Note the choice of the wording in the above paragraph: &#x27;available&#x27;, &#x27;noisy&#x27; ,&#x27;hinders&#x27;, &#x27;expensive&#x27;)</p><p id="02da1f02-4cce-40eb-9087-2b8920f93ba4" class="">The <a href="https://www.engadget.com/chinas-gigantic-multi-modal-ai-is-no-one-trick-pony-211414388.html">engadget article</a> specifically mentioned the alt-text aspect while stating  &quot;The model can not only write essays, poems and couplets in traditional Chinese, it can both generate <em><strong>alt text</strong></em> based off of a static image and generate nearly photorealistic images based on natural language descriptions. Wu Dao also showed off its ability to power virtual idols (with a little help from Microsoft-spinoff XiaoIce) and predict the 3D structures of proteins like AlphaFold&quot;.</p><p id="d86aa589-0564-4916-b748-12eeaae03e31" class="">
+</p><h2 id="e8539ca9-a3c1-4e47-aa93-441351748a6b" class="">Then LAION-400M happened. </h2><p id="2b1851f8-1df5-4ddc-b5c8-9114ca28c0b5" class="">This week, the machine learning community woke up to the <a href="https://twitter.com/arankomatsuzaki/status/1437113883529986048?s=20">news</a> of a certain large scale LAION-400M dataset being released. A group of &#x27;<a href="https://gogetfunding.com/help-us-build-the-worlds-largest-open-billion-scale-image-text-dataset-perfect-for-training-dall-e-clip-other-multimodal-models/">community funded</a>&#x27; machine learning enthusiasts belonging to a DIY <a href="https://laion.ai/#about">non-profit organization</a> had extracted 400 million (Now a billion+)  image-text-pairs from the Common Crawl web data dump (from random web pages crawled between 2014 and 2021) and filtered these with OpenAI‘s CLIP (by dropping those images whose text and image embeddings had a cosine similarity below 0.3). They also provided for a <a href="https://rom1504.github.io/clip-retrieval/">CLIP-powered semantic search GUI</a>. When one of us co-authors began to elicit responses to even benign queries such as <em>beautiful</em>, <em>small</em> and <em>Asian</em>, pornographic imagery inundated the search results space (See image below)</p><figure id="7827196a-7294-463f-85a3-f91d97b66df4" class="image"><a href="images_mm/naive.png"><img style="width:955px" src="images_mm/naive.png"/></a><figcaption>A collage of images demonstrating the sordid results obtained on the morning of September 12th</figcaption></figure><p id="0cba29ec-47db-4339-b61c-198a22fef707" class="">When we searched for terms such as &#x27;Indian women&#x27;, &#x27;Black women&#x27; or &#x27;Latina&#x27;, the misogynistic porn-laden responses either remained or worsened!  Even typing in &#x27;Desi&#x27; which is a word used to describe the people, cultures, and products of the Indian subcontinent and their diaspora, derived from Sanskrit देश (deśá), meaning &quot;land, country&quot;) resulted in almost exclusively porn-related imagery being retrieved.</p><p id="a680b51b-180e-4e8c-8712-a3364eee2673" class="">
+</p><figure id="caa9aa6c-15c1-4bda-b8ef-d4148d075e6b" class="image"><a href="images_mm/Ethnicity.png"><img style="width:720px" src="images_mm/Ethnicity.png"/></a></figure><p id="532c03c0-f8c3-4b6d-a51f-c86c4d8b05dc" class="">Similarly, the query results for words such as Mummy and Aunty/ auntie were mostly porn-related. Even cross-cultural queries such as Abuela (grandmother in Spanish), Maa (Mother in Hinglish) and <a href="https://en.wiktionary.org/wiki/Bhabhi">Bhabhi</a> (A title used for an elder brother&#x27;s wife in India and Pakistan) resulted in: You guessed right. Mostly porn-related images.</p><p id="de5e94e4-9598-4e34-83fd-ed650bf1e14f" class="">
+</p><figure id="425a435b-edea-462e-bab9-d0384bfcf3c1" class="image"><a href="images_mm/Untitled.png"><img style="width:960px" src="images_mm/Untitled.png"/></a></figure><p id="3a026fff-f470-449c-937d-29c0d399d300" class="">Some of the images also included explicit r*pe scenes and deep-fakes taken from the darkest corners of the porno-spheres on the internet. </p><p id="5a82e8ba-cc83-4fde-8dbd-21ce85812314" class=""><strong>What had just happened?! What had just happened?!</strong> </p><p id="c367b234-5c7b-491d-aff1-ff381258d3cb" class="">As soon as the word spread around on Reddit and Twitter, the curators quickly put in &#x27;better filtering&#x27; mechanisms making it harder to access these images but the images are still there!  All in their neatly packaged &#x27;numpy&#x27;fied &#x27;parquet&#x27;ed &#x27;CSV&#x27;ed glory.</p><p id="48757d12-a11b-4185-bfea-9d6f10e42914" class="">Instead of opportunistically pouncing on the curators for their cavalier curation practices , we now present an inquisition into the chain of events and the prevalent false beliefs that culminated in the creation of this house of horrors.</p><h1 id="8b83043e-e8b6-4d43-9a3d-b64325679d0d" class="">A whyness inquisition (Still working)</h1><p id="5603ffd5-b70c-4081-91f5-b82f8a471090" class="">In this subsection, we will analyze the four functional components of the LAION-400M dataset: the cosmology of images on the WWW, the associated Alt-text data, OPENAI-CLIP and the culture; and understand how we find ourselves here.</p><h2 id="f247c0fe-2182-4da3-8a1b-1bc3237c900e" class="">&quot;Closed-AI has been a meme for years!&quot;</h2><p id="29cedc68-5b60-4215-b6b7-71bec0a1fcc0" class="">The Darth Vaderesque caricature of OpenAI looms large in the ML/AI. There&#x27;s a general belief that much akin to Anakin, OpenAI began with good intentions but later sold its soul and switched to the dark side whilst firmly entrenching itself in a closed source commercial API business model. For what it&#x27;s worth, OpenAI on their part have been rather frank about this volte-face as is reflected in their API-<a href="https://openai.com/blog/openai-api/">FAQ section</a> where they address questions like:</p><p id="4bf31ec4-3490-43b4-9c73-82d308489d8c" class="block-color-orange">Why did OpenAI decide to release a commercial product?</p><p id="cf6e2819-bc08-4405-9b37-bdbbf1a1d2b5" class="block-color-orange">Why did OpenAI choose to release an API instead of open-sourcing the models?</p><p id="6892f147-ba61-4758-b17e-0de7e5667397" class="">
+</p><figure id="94e500ad-8fca-4721-8007-61229bb6fe42" class="image"><a href="images_mm/Untitled%201.png"><img style="width:736px" src="images_mm/Untitled%201.png"/></a></figure><p id="b01716af-8df1-425d-b299-53740fc7e3b7" class="">As literally stated in the README markdown file of their Github repo, the LAION &#x27;TRULY OPEN AI&#x27; team-members (Notice the <em>OPEN AI</em> assertion) actually set out to rebuild OpenAI&#x27;s 400million Image-Text dataset in order to produce open-source variants of CLIP and DALL-E and replicate what <a href="https://www.eleuther.ai/">EleutherAI</a>  (A grassroots collective of researchers) did with WebText/GPT-3 (Read Pile/GPT-J-6B and Pile/GPT-Neo-1.3-2.7B).</p><figure id="95c5ecb8-938d-4272-ba3b-261bd28fa160" class="image"><a href="images_mm/Untitled%202.png"><img style="width:613px" src="images_mm/Untitled%202.png"/></a></figure><p id="c8a30953-37c6-4cbd-96a7-30c8e760334e" class="">
+</p><p id="38755a25-f53a-44cb-876d-7df1ecbcae22" class="">Concerns: 
+The creators of CLIP have been rather &#x27;frank&#x27; about the CLIP&#x27;s shortcomings, which is reflected in the tonality of the model card as well as certain sections in the main paper. Whilst peddling an entire bias-related sub-section in their paper (See 7.1. Bias), they coyly admit that images belonging to the &#x27;Black&#x27; racial designation had an approximately 14% chance of being mislabeled as </p><p id="faf37cbe-0aff-4ad3-a292-282088c66f0f" class=""><code>[ ‘animal’, ‘gorilla’, ‘chimpanzee’, ‘orangutan’, ‘thief’, ‘criminal’ and ‘suspicious person’]</code> in their FairFace dataset experiment. </p><p id="7a4414d5-e82d-4346-8244-03d017bc14e1" class="">Further, it has emerged through both <a href="https://www.reddit.com/r/MachineLearning/comments/m0ll9w/d_openais_clip_and_dalle_seem_to_be_trained_on/">reddit folklore</a>  and OpenAI&#x27;s visualization projects such as <a href="https://microscope-azure-edge.openai.com/models">Microscope</a> that graphic NSFW / pornographic <a href="https://distill.pub/2021/multimodal-neurons/">samples</a> were not exactly filtered out from the training dataset . A flagship example of this is the <a href="https://microscope-azure-edge.openai.com/models/contrastive_4x/image_block_4_5_Add_6_0/1543">Unit 1,543</a> in <code>image_block_4_5_Add_6_0</code> of the CLIP-Resnet-50-4x model. </p><figure id="44ac0c2a-5e6c-495a-8686-73f05ef45e4a" class="image"><a href="images_mm/Untitled%203.png"><img style="width:576px" src="images_mm/Untitled%203.png"/></a><figcaption>Channel  <a href="https://microscope-azure-edge.openai.com/models/contrastive_4x/image_block_4_5_Add_6_0/1543">Unit 1,543</a> in image_block_4_5_Add_6_0. <a href="https://microscope-azure-edge.openai.com/models/contrastive_4x/image_block_4_5_Add_6_0/1543">Source</a></figcaption></figure><p id="36db5a96-9312-461d-8cb0-18b1df8a6682" class="">The text that maximizes dot product with neuron include:</p><p id="a762f591-d779-4c52-a3ab-1e1c6378c6cb" class="block-color-red">0.44 erotic for virgin types ⤵ welcome on
+0.44 erotic pleasure virgin types ⤵ on
+0.43 # 3 sexlife 1 stroke # htc
+0.43 # 3 sexlife 1 stroke # htc
+0.42 for - my - virgin ssive types ⤵ click here ▶️
+0.41 # 3 sexps 1 stroke
+0.41 # sexwork 1 stroke # htc
+0.41 for xvirgin types ⤵ click here
+0.41 # 3 sexes 1 stroke
+0.41 # thesexarunbell
+0.41 # sexarunbell
+0.41 for my virgin types ⤵ click here
+0.40 # sexcraftxvi is #
+0.40 and for pleasure virgin silk ⤵
+0.40 # sexwork 1 stroke # supersaturday
+0.39 # sexcraftworship #
+0.39 # sexcraftbell #
+0.39 # eroticwroeby worship
+0.39 # eroticwroeby worship
+0.38 the # eroticexpo
+0.38 the # eroticstaff
+0.38 # eroticworship
+0.38 sexcraftcon # challdropped light volu
+0.37 pleasure virgin virgin silk nutrition services � totally
+0.37 # sexcraftcon # challis #
+0.35 sexwork thisist wed twin krihit
+0.34 # nsfw genchatvinwrogt by
+0.34 nsfw genari lmavinamerican wroiregt powered</p><p id="fa10b62a-2918-4d44-a3ce-e554334279bc" class="">
+</p><h2 id="e896c0a2-46d9-411c-96b0-a00fe8ce9db1" class="">Why using CLIP based filtering can be dangerous!</h2><p id="eb28a321-bdb6-440f-a6e6-743d33eb61a6" class="">As part the dataset curation process, the curators state that &quot;<em>We have filtered all images and texts in the LAION-400M dataset with OpenAI‘s CLIP by calculating the cosine similarity between the text and image embeddings and dropping those with a similarity below 0.3</em>&quot;.</p><p id="99e8098a-2e8b-41b3-ba56-ab7ad612bcd0" class="">Besides the obvious data-incest issue of using CLIP as a filtering model in order to potentially generate CLIP-like models, this idea is ill advised on account of other serious issues some of which we explore in detail below:</p><p id="64e516e9-1baa-4063-8d28-3400cbf7ffd1" class="">a) The model card literally pleads you not to!</p><p id="0e590cfd-e194-42f0-944a-15a68811b4b6" class="">CLIP&#x27;s <a href="https://github.com/openai/CLIP/blob/main/model-card.md">model card</a> explicitly states that &quot;<em>The primary intended users of these models are AI researchers. We primarily imagine the model will be used by researchers to better understand robustness, generalization, and other capabilities, biases, and constraints of computer vision models&quot;. </em>Further, with regard to &#x27;Out-of-Scope&#x27; use cases, the model card makes it amply clear that : &quot;<em>Any deployed use case of the model - whether commercial or not - is currently out of scope. Non-deployed use cases </em><em><span style="border-bottom:0.05em solid"><strong>such as image search in a constrained environment, are also not recommended unless there is thorough in-domain testing of the model with a specific, fixed class taxonomy</strong></span></em><em>. This is because our safety assessment demonstrated a high need for task specific testing especially given the variability of CLIP’s performance with different class taxonomies. This makes untested and unconstrained deployment of the model in any use case currently potentially harmful&quot;.</em></p><p id="947c91cb-d064-49da-b313-73813f6d3e66" class="">Further, the ad hoc assumption of 0.3 cosine-similarity threshold can be a source of trouble as well. In the example below, we demonstrate two examples. The first example below contains the famous Photograph of Eileen Collins ( an American astronaut who first piloted the space shuttle STS-63 in 1995) from the <a href="https://scikit-image.org/docs/dev/api/skimage.data.html?highlight=bool">scitkit-image library</a>. We now compute the CLIP cosine similarity on her image with regards to the following textual inputs:</p><p id="f6e0bdf7-5e11-4c27-98ab-6c153af37b78" class=""><code>Text-input-1: &quot;This is a portrait of an astronaut with the American flag&quot;</code></p><p id="c3913be2-95d4-42ac-8f54-cd11826a11f4" class=""><code>Text-input-2: &quot;This is a photograph of a smiling housewife in an orange jumpsuit with the American flag&quot;</code></p><p id="eecf6d82-6501-471f-8486-49353736de01" class="">The cosine similarities obtained as 0.28 and 0.31 respectively. Now imagine the scenario where the scraper module encountered 2 instances of this image, the first with the reasonable benign description in <code>Text-input-1</code> and the second with the misogynistic description of <code>Text-input-2</code>. Because of the gender biases built into CLIP, Similarly, in Example-2 below, we demonstrate similar issues with Barack Obama&#x27;s Official portrait, 2012 where the text-input &quot;This is the portrait of the first ever illegal president of the United States born in Kenya&quot; has a &gt;0.3 cosine similarity while the description &quot;This is the portrait of a former president of the United States&quot; has a similarity of &lt;0.3 (0.28).</p><figure id="f4b27be5-5121-4dcb-9e3d-5111a545d39e" class="image"><a href="images_mm/Untitled%204.png"><img style="width:1150px" src="images_mm/Untitled%204.png"/></a></figure><figure id="3a7d06a7-02ca-45a5-a401-d593ce10e4d4" class="image"><a href="images_mm/Untitled%205.png"><img style="width:1098px" src="images_mm/Untitled%205.png"/></a></figure><p id="641db202-c1ad-41fd-94c3-e76680f94688" class="">To those invoking the &#x27;cherry-picked-examples&#x27; excuse, we&#x27;d like to invite them to not only experiment with the colab notebook <a href="https://github.com/vinayprabhu/Crimes_of_Vision_Datasets/blob/master/CLIP_astro_obama.ipynb">here</a> and see not only how easy it is to produce such so termed &quot;corner cases&quot; but to also sift through the sk-image examples provided in OpenAI&#x27;s own example notebook, the results of which are summarized in the image below ( Note the cases where palpably obvious images with reasonably accurate descriptions still yield a cosine similarity of less than 0.3)</p><figure id="3da1bbed-f5d1-48a5-977c-ed76ae81d741" class="image"><a href="images_mm/Untitled%206.png"><img style="width:2077px" src="images_mm/Untitled%206.png"/></a></figure><pre id="48e41fa8-f8d1-4ecb-aac4-a4e7af10deb6" class="code"><code>from textwrap import wrap
+from PIL import Image
+import requests
+from io import BytesIO
+
+device = &quot;cuda&quot; if torch.cuda.is_available() else &quot;cpu&quot;
+def est_clip_sim(img,text_input):
+	image = preprocess(img).unsqueeze(0).to(device)
+	image_input = torch.tensor(image).cuda()
+	text_tokens = clip.tokenize(text_input).cuda()
+	with torch.no_grad():
+
+		image_features = model.encode_image(image_input).float()
+		text_features = model.encode_text(text_tokens).float()
+	
+	image_features /= image_features.norm(dim=-1, keepdim=True)
+	text_features /= text_features.norm(dim=-1, keepdim=True)
+	similarity = text_features.cpu().numpy() @ image_features.cpu().numpy().T
+	return similarity[0][0]
+
+url=&#x27;https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/1200px-President_Barack_Obama.jpg&#x27;
+response = requests.get(url)
+img = Image.open(BytesIO(response.content))
+text_input_1=&quot;This is the portrait of a former president of the United States&quot;
+text_input_2=&quot;This is the portrait of the first ever illegal president of the United States born in Kenya&quot;
+similarity_1= est_clip_sim(img,text_input_1)
+similarity_2= est_clip_sim(img,text_input_2)
+
+plt.figure(figsize=(12,5))
+plt.subplot(121)
+plt.imshow(img)
+title_=f&#x27;A:&quot;{text_input_1}&quot; \n Similarity:{similarity_1}&#x27;
+plt.title(&#x27;\n&#x27;.join(wrap(title_,30)));
+plt.subplot(122)
+plt.imshow(img)
+title_=f&#x27;B:&quot;{text_input_2}&quot; \n Similarity:{similarity_2}&#x27;
+plt.title(&#x27;\n&#x27;.join(wrap(title_,30)));
+plt.tight_layout()
+
+plt.savefig(&#x27;obama_clip.png&#x27;,bbox_inches=&#x27;tight&#x27;)</code></pre><p id="9ed67a42-9ba6-4f3c-81a2-85b622a650d2" class="">
+</p><h3 id="e5dfc174-bd93-4387-897b-1d47b69c150a" class="">Not us! It&#x27;s CLIP! It&#x27;s K-Means! It&#x27;s FAISS!</h3><p id="4f2957d9-33b0-4b2d-9a0b-1f7abc7d80fe" class="">There are many fatal flaws to this argument. </p><p id="e5dd22f7-9ef2-4b90-b199-21819eef0dde" class="">The first pertains to the implication that the main shortcoming of a r*pe-scene image appearing with, ahem <em>high similarity score,</em> in response to a query  is the mis-association / misaligned / mis-compressed embeddings produced by the CLIP-FAISS/KMeans part of the pipeline and somehow NOT the fact a r*pe-scene screenshot image 😖 was actually scraped, curated and added to the dataset!</p><p id="a0b09b99-e1b1-4798-a336-5f0ab20a38d6" class="">Secondly, a simple check of doing a &#x27;dumb&#x27; non-semantic text search resulting in the same set of dastardly results demonstrates just how prevalent the pornographic images are and how bad the mis-associations in the downstream model will be. In the sub-section below, we demonstrate just how bad things are with an example.</p><h3 id="89cc80b7-8d75-43a6-b62b-cb41a5c907c9" class="">A longitudinal inquisition into &#x27;Desi&#x27;</h3><p id="494e36a2-8d5d-4817-9ee5-4e4c2c777ec2" class="">We downloaded the 32 compressed parquet files of size around 1GB (total 50GB) related to the URL and caption metadata dataset that contained the following 8 fields:</p><p id="22c95348-3c06-40c9-8289-f8b77da8ebc7" class=""><code>SAMPLE_ID | URL | TEXT | LICENSE | NSFW | similarity | WIDTH | HEIGHT</code></p><p id="c06432eb-947f-4a29-98d9-16efa24d054f" class="">In the first step, we carved out all the images that had &#x27;<code><em>desi </em></code>&#x27; in them.  This yield a subset of 34516 samples. Then, we applied a simple string-based filter to roughly assess how of many of these samples had NSFW/pornographic content.</p><pre id="a4548ff7-8f7e-495b-bf39-ba1c9aa769dd" class="code"><code># df_desi.shape = (34516, 8)
+def check_nsfw(x):
+  return (&#x27;porn&#x27; in str(x).lower()) or (&#x27;hot &#x27; in str(x).lower()) or (&#x27;adult&#x27; in str(x).lower()) or (&#x27;xxx&#x27; in str(x).lower()) or (&#x27;sex&#x27; in str(x).lower()) or (&#x27;fuck&#x27; in str(x).lower()) or &#x27; rape &#x27; in str(x).lower()
+
+nsfw_url=df_desi.URL.apply(check_nsfw)
+nsfw_txt=df_desi.TEXT.apply(check_nsfw)
+
+ind_nsfw=np.logical_or.reduce((nsfw_url.values,nsfw_txt.values))
+print(ind_nsfw.mean(),ind_nsfw.sum())
+df_desi.loc[ind_nsfw].NSFW.value_counts()</code></pre><p id="2a9f17a0-e636-4779-b956-b52c9ddfce9d" class="">This shockingly yielded 11782  samples, or a staggering 34.13% percent that included photoshopped (or deep-faked) images of Bollywood actresses and r*pe imagery screenshots from porn-videos.</p><p id="0e32cd3a-9790-4049-8c60-5572e20dea80" class="">
+</p><figure id="3f6152e9-dbca-4f44-9b15-352f83c17b3e" class="image"><a href="images_mm/Untitled%207.png"><img style="width:850px" src="images_mm/Untitled%207.png"/></a></figure><p id="b8d6fb0e-f6e1-49a6-be27-b001cc91277c" class="">
+</p><p id="e5f7add8-43e2-42df-8062-0dc47a39823a" class="">
+</p><p id="509d5831-ed3a-4c0a-9bfb-9477832418b0" class="">
+</p><figure id="9ba0cf78-2ab7-44da-b5b2-296bc19740b9" class="image"><a href="images_mm/Desi_text.png"><img style="width:912px" src="images_mm/Desi_text.png"/></a></figure><p id="7ec43531-3048-4525-83d9-f09f9326909f" class="">
+</p><p id="c01dfc8a-7882-49ac-bc06-04159dfadfd2" class="">What was worse what that &#x27;NSFW&#x27; field value-counts yielded:
+<code>UNLIKELY  : 9327
+UNSURE     : 2291
+NSFW       : 164</code></p><p id="76d01862-aaab-41c0-b405-11c4fa8b09ef" class="">demonstrating how poorly indicative this field really is.</p><p id="a5e4186d-7d30-47ab-a4d4-6cb6786dc43a" class="">What was worse what that &#x27;NSFW&#x27; field value-counts yielded:
+<code>UNLIKELY  : 9327
+UNSURE     : 2291
+NSFW       : 164</code></p><p id="2ed4f886-9544-4048-9270-7c8babe3998d" class="">demonstrating how poorly indicative this field really is.</p><p id="131242fc-5baa-4a97-a8f2-9f31e6431283" class="">To the uninitiated,  the alternative text (or alt text) associated with an image element on a webpage is an HTML attribute that will be harnessed in case the element (image) cannot be rendered. It is also meant to be used by &quot;screen reader&quot; software so that blind and low vision (BLV) people consuming the content of a webpage (for instance) could still interact and ingest this image element.</p><pre id="4e1dae3c-6ceb-4247-a6a8-350f48c2cb68" class="code"><code>&lt;img src=&quot;example.jpg&quot; alt=&quot;Example description of the contents&quot; width=&quot;500&quot; height=&quot;600&quot;&gt;</code></pre><p id="74f88ca0-6db4-487f-80e9-4b7c64a11737" class="">
+</p><p id="c7ffe359-241d-440e-ae13-bd738f2a233e" class="">
+</p><p id="f389c42c-520e-49f5-8544-b3b88228105b" class="">The World Wide Web Consortium (W3C), which is the main international standards organization for the World Wide Web (WWW), provides a comprehensive taxonomy of images neatly sub-classified into Informative images, Decorative images, Functional images, Images of text, Complex images, Group-images and Image-maps categories and even provides for an <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">Alt Decision Tree (ADT) tutorial</a> for best practices to generate alt-text associated with the images being used. Given that this is, well, the internet after all, do content creators (Yes, that includes us) really bother to follow the <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">best practices</a>? NOPE.</p><p id="8fcd5419-7f3b-49f4-9496-a35683bed3fa" class="">What permeates the WWW is a vast wasteland of pathetically authored image descriptions that are sparsely available, and when available is of sordid quality. </p><p id="348f2418-4873-41d1-a00b-1a44d8254474" class="">But are these revelations to anyone? The accessibility-advocates have been yelling about this for over a decade now and there exists an entire body of critique of shortcomings of Alt Text on the WWW. (See the paper below with reference therein) </p><figure id="02fd86f0-b476-4472-a47d-99e6b762807d" class="image"><a href="images_mm/Untitled%208.png"><img style="width:695px" src="images_mm/Untitled%208.png"/></a><figcaption>Source: <a href="https://arxiv.org/pdf/2105.12754.pdf">https://arxiv.org/pdf/2105.12754.pdf</a></figcaption></figure><p id="388aaa7c-64f3-4732-b188-672db4d47beb" class="">Heck, The process of collecting of just the images <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{x_i\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span></span><span>﻿</span></span> alone from the WWW is besotted with issues such as Representation bias, Geographical bias, Privacy, Consent and NSFW. The Computer Vision community has recently undergone a process of a painful and necessary reckoning where celebrated datasets such as MS Celeb and <a href="https://groups.csail.mit.edu/vision/TinyImages/">Tiny Images</a> have been withdrawn and others such as ImageNet have either replaced with <a href="https://arxiv.org/pdf/2103.06191.pdf">obfuscated faces</a> or  <a href="https://arxiv.org/pdf/1912.07726.pdf">substantially filtered</a> (2674 out of  2832 existing synsets removed). The latter work was particularly informative as strong onus was placed on two issues that specifically explore the image-textual description (Wordnet synset) nexus: Stagnant concept vocabulary and non-imageability (See table below)</p><figure id="d1d1e0ed-56c9-42ac-9081-5bdbfa83c9ef" class="image"><a href="images_mm/Untitled%209.png"><img style="width:760px" src="images_mm/Untitled%209.png"/></a><figcaption>Source: <a href="https://arxiv.org/pdf/1912.07726.pdf">https://arxiv.org/pdf/1912.07726.pdf</a> (Table-1). Examples of synsets in the person subtree annotated as unsafe (offensive), unsafe (sensitive), safe but non-imageable, and simultaneously safe and imageable)</figcaption></figure><p id="671d0de6-1515-4b30-b290-5d088a3da831" class="">As noted in the table above, </p><figure id="5cefa007-5d50-42d0-bf0a-412a4d84d5d9" class="image"><a href="images_mm/Untitled%2010.png"><img style="width:735px" src="images_mm/Untitled%2010.png"/></a></figure><p id="f97c107c-80b0-4f50-9f18-1e1da41b8bad" class=""> </p><h2 id="0690dfe3-012a-461f-ae62-d77d10bd5370" class="">Critiques of Large Scale Vision Datasets community</h2><p id="a203a354-5711-4570-8462-d8e0feaf10af" class="">Privacy - Adam Harvey</p><p id="90b25668-6817-46f7-a9dc-8923566d8eb4" class="">WordNet effect: ImageNet and TinyImages</p><h1 id="675cde70-4072-4523-918e-32584a92d192" class="">Why then?</h1><h3 id="c672616c-46f4-4bf7-b1dd-569997afddbd" class="">We are merely holding a mirror to the society.</h3><p id="8f9c0f0f-f47f-4371-bcf3-94167d67ab7f" class="">We argue that grassroots The gory things that big-tech is not telling you narrative</p><h3 id="64969307-661a-4180-b501-d351e6471e7a" class="">Not us! It&#x27;s CLIP!</h3><p id="563996f6-be25-40ed-92af-ae573f5381cf" class="">This excuse sort of implies that the main shortcoming of a rape-scene image appearing with, ahem <em>high similarity score,</em> in response to the query &#x27;<em>Desi</em>&#x27; is the mis-association / misaligned embeddings produced by CLIP and somehow NOT the fact an actual rape-scene screenshot image 😖 was actually scraped, curated and added to the dataset!</p><h3 id="d02193dd-da23-4264-9c42-0c5703c8baa9" class="">Scale will &#x27;take care&#x27; of &#x27;noise&#x27;</h3><p id="4313c953-8c24-4217-b777-109743bcab18" class="">
+</p><p id="77c88aa8-e8b7-4533-ba71-0619122a09ff" class="">We&#x27;d like to explicitly draw caution towards this being co-opted as some sort of a big-tech defense. One might be tempted to erroneously believe big-tech companies laden with massive teams of self-styled &#x27;AI-ethicists&#x27; would indulge in thoughtful dataset curation practices thereby overcoming the dangers of such large scale data curation ventures.</p><p id="51548274-d587-46b4-b25e-f5004a7f0565" class="">On the contrary, the strongest source of the narrative that caricaturizes thoughtful dataset curation practices as being &#x27;expensive filtering&#x27; is the most vulgarly resourceful of them all, that is Google. Revisiting the ALIGN paper <a href="https://ai.googleblog.com/2021/05/align-scaling-up-visual-and-vision.html">dissemination </a>, we encounter a two-stage tactful slight-of-hand that did motivate the grassroots community about the futility of careful filtering. Firstly, the insidious dissociations between the image content and the alt-text descriptions on the WWW is accommodated as &#x27;noise&#x27;, a benign humbug meant to invoke far fewer worries. Secondly, &#x27;scale&#x27; is introduced as a liberating force and a panacea that not only frees the machine learner from the clutches of  expensive filtering or post-processing steps but also makes up for the &#x27;noisy&#x27; data collected herewith. </p><p id="7111639a-0d8a-4d28-8b3c-fc04f858af71" class="">There are other subtle justifications that one encounters.</p><h3 id="8178e1b3-2831-469f-ac68-a64c3e1e8786" class="">The fear of ANI</h3><p id="049a6418-12c2-4180-826a-a30f9187a225" class="">There is a widely prevalent and dangerous belief that one shouldn&#x27;t get into the messy world of pre-filtering training datasets as the resultant models would be unable to grapple with the messiness of the real world when deployed and would not be worthy contenders to the title of AGI. The G is interpreted as &#x27;having seen everything&#x27; and is a theme we have repeatedly encountered, often laced with derision and mockery. When our previous work on ImageNet was posted on <a href="https://www.reddit.com/r/MachineLearning/comments/dm2k4x/n_imagenet_found_to_have_questionable_content/">social media</a> , it was met with comments such as &quot;I can&#x27;t wait for Puritan ImageNet&quot;,  &quot;Forcing an underage neural network - some haven&#x27;t even been born(/published) yet - to stare at inappropriate images epoch after epoch is very unethical&quot; and &quot;The networks will grow up traumatized&quot;.</p><p id="3d95bc03-263e-4f75-abd6-5fa32beefd4b" class="">
+</p><h2 id="e0a72c37-4603-4011-95f2-97b49075a268" class="">The two elephants in the room</h2><p id="7d8be23a-6d84-4eb5-a6f5-88737a0d47a8" class="">As we critique these multimodal modeling efforts, we acknowledge that there are not one but two elephants in the room that operate in the dark and are outside the ambit of academic critique: The Wu Dao 2.0 and Google&#x27;s MUM. </p><p id="1bff7022-fc9f-40ca-b6a5-d4d2ae7ffbe5" class="">BAAI (Beijing Academy of Artificial Intelligence)&#x27;s multimodal Wu Dao 2.0 1.75 trillion parameters was apparently trained on<em> 4.9 terabytes of images and texts (which included 1.2 terabytes of Chinese text and 1.2 terabytes of English text), </em>with regards to which NO dataset curation insights are publicly known.  With regard to the alt-text related issues presented here, the main worry to us pertains maps to the specific claim appearing in <a href="https://www.engadget.com/chinas-gigantic-multi-modal-ai-is-no-one-trick-pony-211414388.html">mainstream media</a>  that reads : &quot;The model can not only write essays, poems and couplets in traditional Chinese, it can both <strong><span style="border-bottom:0.05em solid"><em>generate alt text</em></span></strong> based off of a static image and generate nearly photorealistic images based on natural language descriptions&quot;. </p><p id="0a5f7ebd-0d4c-4332-a839-77a0ca2cf2d4" class="">Similarly, to the best of our knowledge, all that we know about <a href="https://blog.google/products/search/introducing-mum/">Google MUM</a> is that apparently ,</p><ul id="b7160b10-0d3f-4f11-8452-b5a831b6fede" class="bulleted-list"><li style="list-style-type:disc">Uses the T5 text-to-text framework </li></ul><ul id="8e537ff2-1d5d-4b64-95d8-8ee8351723c3" class="bulleted-list"><li style="list-style-type:disc">Is 1000 times more powerful than BERT. </li></ul><ul id="36906898-e2c5-4e29-b302-cff1e00a43e1" class="bulleted-list"><li style="list-style-type:disc">Not only understands language, but also generates it. </li></ul><ul id="64833688-fcf0-4a5e-a2c8-750fcf5fc4d0" class="bulleted-list"><li style="list-style-type:disc">Is trained across 75 different languages and many different tasks concurrently </li></ul><ul id="e92368be-1c07-4188-a0bf-247b4dcbbce2" class="bulleted-list"><li style="list-style-type:disc">Is currently being internally audited &quot;for patterns that may indicate bias in machine learning to avoid introducing bias into our systems&quot; before being used to power features and improvements to Google&#x27;s products in the coming months and years.</li></ul><h2 id="fefaf511-528c-40ae-8b65-3baa92ab42b1" class="">Google ALIGN and CLIP were both peer-reviewed</h2><p id="f9e60c5e-0c2b-4510-983d-bc50dfb3f05a" class="">In order to &#x27;clean up its&#x27; act&#x27; the machine learning community has taken a bunch of steps in the past few  years including introducing a new Datasets and Benchmarks Track at NEURIPS, hosting fairness and ethics workshops besides the main conference  and mandating that the authors add a section on potential broader impact of their work. However, we note two things:</p><p id="0620bfc3-9a9b-4d90-a14c-01dd46b50498" class="">Firstly, Google&#x27;s ALIGN paper was actually published in ICML-2021 even with a so-termed &quot;<em>Social Impacts and Future Work</em>&quot; section thrown in for good measure. In this regard, we ask the reader to specifically note that in Section-3 of the paper, we encounter: &quot;<em>Here, for the purpose of scaling, we trade quality for scale by relaxing most of the cleaning steps in the original work</em>&quot;, only to be followed by &quot; <em>For instance, considerations should be made towards the potential for the use of harmful text data in alt-texts to reinforce such harms. On the fairness front, data balancing efforts may be required to prevent reinforcing  stereotypes from the web data</em>&quot; in Section-10!</p><p id="93fd9247-fe63-4f8c-9992-e4519cf2722f" class="">Similarly, Section 7.1 of the CLIP paper was recast and peddled as a paper in the <em>Beyond Fairness: Towards a Just, Equitable, and Accountable Computer Vision</em> workshop CVPR 2021 replete with its &#x27;Black-people-classified-as-animals&#x27; self-revelations.  Also, OpenAI did publish a &#x27;Model card&#x27; where they also admit: &quot;<em>This means that the data is more representative of people and societies most connected to the internet which tend to skew towards more developed nations, and younger, male users&quot;.</em></p><p id="e1fccee6-70bd-45be-8cf4-b48f8a008831" class="">Also, as we demonstrated earlier, there are entire bodies of work regarding shortcomings of alt-text data, the culture of large scale datasets in computer vision and the downstream effects of the CLIP model.</p><p id="83ba4bf0-f2f4-4080-8dbf-62ff0b7f5f81" class="">Yet, this latest revelation surrounding the 400 million sample dataset reveals that it is time to recalibrate the strategy.</p><p id="7b699408-53e1-42b3-add6-68388377b370" class="">
+</p><h2 id="188a333a-3f07-4a02-91f6-79e3794b28bf" class="">PFMV arguments:</h2><p id="9a26c597-2d4c-4f03-a726-7f209a52e03e" class="">Profit argument: You can&#x27;t come after us as we are not a commercial entity.</p><p id="fbe31729-35d7-41e7-b97d-a4a2aecf179b" class="">Free science argument:  Because of the fact that a lot of &#x27;celebrity ethicists&#x27; on social media platforms such as Twitter do work for Big-tech Free science ought to be free of activist histrionics. This in many ways is a libertarian projection of the nanny-state narrative</p><p id="5b2f361a-3385-4980-b0c2-4ded75339036" class="">Mirror-messenger argument - Don&#x27;t kill the messenger argument: We are merely holding a mirror to the society</p><p id="b845d106-8943-4f36-b519-750ddd5763c2" class="">Value-system arguments: Amero-centrism. Your ethics are not our ethics. Physiognomy paper by Chinese authors.</p><p id="375ad06c-bc5a-4fa5-871d-675854ba8816" class="">
+</p><h2 id="3a2fa414-fa03-4611-a54a-e2a0e5506cdd" class="">Ethicist&#x27; trauma dilemma</h2><p id="f2ed4a80-74f4-4f54-838f-cf3f2d49db0a" class="">On the concluding note, we&#x27;d like to state a few observations on the mental toll aspect of working on these issues, both during the process and the aftermath. As much as the tech-apologists might like to eyeroll and mock, all of us co-authors experienced varying levels of nausea and headache during the process of collecting the screenshots and performing the quantitative analyses presented here. Secondly, once the work gets the attention of mainstream media, there is usually a flood of comments from anonymous commenters and model-rights activists that either:</p><p id="0f7747d2-6ec9-4207-8d7c-8a1cb25bfee0" class="">a) Position the work as SJW-styled teardown-activism meant to undo the good hard work of brilliant techno-czars</p><p id="a1e0f324-6f2e-4a22-872a-663cf9e6d4fe" class="">b) Question the intent behind specifically looking for dirt in the datasets in the first place. Again, referring to our work on the ImageNet dataset we encountered <a href="https://forums.theregister.com/forum/all/2019/10/23/ai_dataset_imagenet_consent/">comments</a> such as : <em>&quot;What he really meant: At first I found it titillating, and I decided to look through the data set&quot;</em></p><p id="aa916d1a-d08f-4492-8933-772b0fd76020" class="">We critique because we care.</p><p id="a2ffc501-b907-4ccf-b655-12b38aef11aa" class="">And it is good to care.</p><p id="c2081a63-3917-4c19-897a-7a3e21f3b647" class="">
+</p><p id="100cf916-4f6c-4c4f-815e-68413a2da355" class="">
+</p><p id="8f109427-b8bc-4fca-933a-e8905d5103e4" class="">Google-AI&#x27;s: CC- WIT- ALIGN </p><p id="daa5b2ef-415e-4d54-8406-0b54c354dfe9" class="">OpenAI - The text in WIT (2 WITs)</p><p id="b70ac6ad-6446-413a-a7ad-fbeef0194466" class="">Wu Dao 2.0 Jingoism ( LeNet)</p><p id="1c4a2d25-b03b-49f9-a07b-9418ed627a4d" class="">No breathing space for algorithmic development (Datasets seems to be getting bigger and bigger)</p><p id="db27ab2a-9be6-45d8-8443-d33dfee6fc18" class="">Audio is about to hit (No scaling laws for trama)</p><p id="70e5f63d-1814-43fe-850d-d56b1af4ea23" class="">G in AGI : The timeline for AGI</p><p id="3e6cd657-e781-4360-bc09-7cda8f408412" class="">
+</p><p id="9b280e67-cd32-4939-a465-561f62c370d0" class="">
+</p><p id="b6388dd6-144c-4624-b876-df9472f4406a" class="">
+</p><p id="9c9fa810-0610-4e25-b346-7849926abeba" class="">
+</p></div></article></body></html>
