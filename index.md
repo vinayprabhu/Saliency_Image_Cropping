@@ -20,7 +20,7 @@ Choose your favorite subject:
          TEST_ipynb</button>
  <button onclick="location.href='./tutorials/timeline.html'" type="button">
          TEST_html</button>
-<button onclick="location.href='./tutorials/test_mm2.html'" type="button"> TEST_MM</button>
+<button onclick="location.href='./tutorials/text_mm2.html'" type="button"> TEST_MM</button>
 
 
 ### Markdown
