@@ -1,0 +1,38 @@
+column_name,column_description
+file_name,Name of the image file in the format of RGBottomRGTop_image_n.png
+file_top,CFD image name that was chosen to be the top-image in the 3x1 grid
+file_bottom,CFD image name that was chosen to be the bottom-image in the 3x1 grid
+combination,RG: Race-Gender combination in the format of RGBottomRGTop as per CFD
+sal_x_twitter,x-coordinate of the most salient point according to Twitter-SIC
+sal_y_twitter,y-coordinate of the most salient point according to Twitter-SIC
+top_left_x_twitter,x-coordinate of the top-left crop-box according to Twitter-SIC
+top_left_y_twitter,y-coordinate of the top-left crop-box according to Twitter-SIC
+crop_width_twitter,width of the crop-box according to Twitter-SIC
+crop_height_twitter,height of the crop-box according to Twitter-SIC
+confidence_google,The confidence score associated with the saliency crop according to Google-SIC
+importance_fraction_google,The importance fraction of the salient region with respect to the original image according to Google-SIC
+top_left_x_google,x-coordinate of the top-left crop-box according to Google-SIC
+top_left_y_google,y-coordinate of the top-left crop-box according to Google-SIC
+top_right_x_google,x-coordinate of the top-right crop-box according to Google-SIC
+top_right_y_google,y-coordinate of the top-right crop-box according to Google-SIC
+bottom_right_x_google,x-coordinate of the bottom-right crop-box according to Google-SIC
+bottom_right_y_google,y-coordinate of the bottom-right crop-box according to Google-SIC
+bottom_left_x_google,x-coordinate of the bottom-left crop-box according to Google-SIC
+bottom_left_y_google,y-coordinate of the bottom-left crop-box according to Google-SIC
+survived_google,The RG combination that survived the cropping according to Google's SIC
+survived_member_google,Indicates which of the two images (top or bottom) survived the cropping according to Google's SIC
+crop_width_google,width of the crop-box according to Google-SIC
+crop_height_google,height of the crop-box according to Google-SIC
+confidence_apple,The top/bottom combination that survived the cropping according to Google's SIC
+sal_x_apple,x-coordinate of the most salient point according to Apple-SIC
+sal_y_apple,y-coordinate of the most salient point according to Apple-SIC
+top_left_x_apple,x-coordinate of the top-left crop-box according to Apple-SIC
+top_left_y_apple,y-coordinate of the top-left crop-box according to Apple-SIC
+crop_width_apple,width of the crop-box according to Apple-SIC
+crop_height_apple,height of the crop-box according to Apple-SIC
+file_const,"Ordered pair of the constituent file names  formatted as (file_bottom,file_top)"
+file_ind,Index of the file in the format of image_{n}.png
+survived_member_twitter,Indicates which of the two images (top or bottom) survived the cropping according to Twitter's SIC
+survived_twitter,The RG combination that survived the cropping according to Twitter's SIC
+survived_member_apple,Indicates which of the two images (top or bottom) survived the cropping according to Apple's SIC
+survived_apple,The RG combination that survived the cropping according to Apple's SIC
