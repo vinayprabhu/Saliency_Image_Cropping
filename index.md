@@ -21,7 +21,7 @@ main-1 check
 
 <button onclick="location.href='./tutorials/create_table.ipynb'" type="button">
          TEST_ipynb</button>
- <button onclick="location.href='./sub_pages/paper_html/main1.html'" type="button">
+ <button onclick="location.href='./sub_pages/paper_html/main.html'" type="button">
          TEST_html</button>
 <button onclick="location.href='./tutorials/text_mm2.html'" type="button"> TEST_MM</button>
 
