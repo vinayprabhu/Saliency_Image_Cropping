@@ -1,6 +1,7 @@
 ## Auditing Saliency Image Cropping
 
-CHANGE TEST!
+We had tons of experimental data that we have no bandwidth to scrutinize carefully. Feel free to reach out and we'd be extremely happy to share these with you!
+
 You can use the [editor on GitHub](https://github.com/vinayprabhu/Saliency_Image_Cropping/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
