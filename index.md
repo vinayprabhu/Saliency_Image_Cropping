@@ -17,6 +17,9 @@ While Twitter had to grapple with the downstream cropping biases experienced by 
 
 We created this website to catalogue all our investigative efforts spanning 15 months, 3 continents, 2 papers, and, well, 2 COVID diagnoses :( .
 
+This work would not have been possible without the incredible support of the following scholars:
+[AbuBakar Abid (Gradio)](https://twitter.com/abidlabs),  [Ali Abdalla (Gradio)](https://twitter.com/si3luwa), [Alexander Kroner](https://scholar.google.com/citations?user=hWKtP0sAAAAJ&hl=en), [Sang Han](https://github.com/jjangsangy), [Prof. Broderick Turner](https://marketing.pamplin.vt.edu/people/faculty/turner.html), [Darrell Owens](https://twitter.com/IDoTheThinking) and all the volunteers who alerted us on various manifestations of cropping biases via our [Cropping_bias Twitter handle](https://twitter.com/cropping_bias).
+
 If you are a researcher with relevant expertise who’d like to join hands, feel free to contact us!
 
 ![WACV-2022 Poster](./gallery/1384-wacv-poster.svg)
