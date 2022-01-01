@@ -1,1 +1,0 @@
-The MGL grid images
