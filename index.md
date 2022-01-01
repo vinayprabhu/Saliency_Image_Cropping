@@ -23,9 +23,8 @@ While Twitter had to grapple with the downstream cropping biases experienced by 
 We created this website to catalogue all our investigative efforts spanning 15 months, 3 continents, 2 papers, and, well, 2 COVID diagnoses :( 
 It captures much of our efforts in the period spanning Sep 2020 to Nov 2021 (See the [Timeline](#timeline)) during which we collaborated with computer vision researchers who have worked in this area of research and ethicists alike (See [Acknowledgements](#acknowledgements)).
 
-In order to ensure transparency, we are sharing the reviews provided by the anonymous reviewers at the CVPR-2021 workshop and WACV [here](https://github.com/vinayprabhu/Saliency_Image_Cropping/tree/main/paper)
-
-If you are a researcher with relevant expertise who’d like to join hands, feel free to contact us!
+In order to ensure transparency, we are sharing the reviews provided by the anonymous reviewers at the CVPR-2021 workshop and WACV [here](https://github.com/vinayprabhu/Saliency_Image_Cropping/tree/main/paper). 
+In the coming week(s), we will be sharing all the code and a whole slew of experimental results that did not make it to either of our two papers. It is our goal to eventually summarize all our findings into a single monologue. If you are a researcher with relevant expertise who’d like to join hands, feel free to contact us 🤗
 
 ## Poster
 ![WACV-2022 Poster](./gallery/1384-wacv-poster.svg)
