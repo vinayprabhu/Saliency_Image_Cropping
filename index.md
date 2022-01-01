@@ -6,11 +6,13 @@ filename: index
 
 # Auditing Saliency Image Cropping
 
-<button onclick="location.href='./paper_html/main.html'" type="button"> Read our WACV-2022 Paper</button>
+<button onclick="location.href='./paper_html/main.html'" type="button"> Read our WACV-2022 Paper (HTML) </button>
 <!-- <button onclick="location.href='temp_del.md'" type="button">  Timeline of the project </button>
 <button onclick="location.href='./sub_pages/timeline.html'" type="button"> Twitter-Critique </button> -->
 
-[timeline](#timeline)
+- [Timeline](#timeline)
+- [Acknowledgements](#Acknowledgements)
+- [Video](#video)
 
 
 
@@ -21,16 +23,13 @@ Sold under different monikers such as ‘AI assisted cropping’, ‘Smart cropp
 While Twitter had to grapple with the downstream cropping biases experienced by its users in a very [public way](https://www.theguardian.com/technology/2020/sep/21/twitter-apologises-for-racist-image-cropping-algorithm) ultimately resulting in its removal, it continues to be deployed aggressively across the other platforms. 
 
 We created this website to catalogue all our investigative efforts spanning 15 months, 3 continents, 2 papers, and, well, 2 COVID diagnoses :( .
-
-This work would not have been possible without the incredible support of the following scholars:
-[AbuBakar Abid (Gradio)](https://twitter.com/abidlabs),  [Ali Abdalla (Gradio)](https://twitter.com/si3luwa), [Alexander Kroner](https://scholar.google.com/citations?user=hWKtP0sAAAAJ&hl=en), [Sang Han](https://github.com/jjangsangy), [Prof. Broderick Turner](https://marketing.pamplin.vt.edu/people/faculty/turner.html), [Darrell Owens](https://twitter.com/IDoTheThinking) and all the volunteers who alerted us on various manifestations of cropping biases via our [Cropping_bias Twitter handle](https://twitter.com/cropping_bias).
-
 If you are a researcher with relevant expertise who’d like to join hands, feel free to contact us!
 
+## Poster
 ![WACV-2022 Poster](./gallery/1384-wacv-poster.svg)
 
 
-
+## Video
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BSHG0bIcNL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
@@ -52,7 +51,7 @@ If you are a researcher with relevant expertise who’d like to join hands, feel
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT3nr80ooMkBfvq0QgX6Z-eV_pYVtQzR78kcqxVfgxqnasFut32YoxK52OiqE7wkyOzpUw2pF4eElJc/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-### Timeline
+## Timeline
 
 | Date 	| Event 	|
 | September 19, 2020 	|  🔭Discovery on Twitter and first simple set of experiments 🔬 	|
@@ -67,3 +66,8 @@ If you are a researcher with relevant expertise who’d like to join hands, feel
 | August 11, 2021 	| ✍ Second paper submitted @ WACV-2022 (Round-2) 	|
 |  October 4, 2021 	| Acceptance notification at WACV-2022  🙌 	|
 | January 6, 2022 	|  😎 🎊 Paper + Poster presentation at WACV-2022   	|
+
+## Acknowledgements
+
+This work would not have been possible without the incredible support of the following scholars:
+[AbuBakar Abid (Gradio)](https://twitter.com/abidlabs),  [Ali Abdalla (Gradio)](https://twitter.com/si3luwa), [Alexander Kroner](https://scholar.google.com/citations?user=hWKtP0sAAAAJ&hl=en), [Sang Han](https://github.com/jjangsangy), [Prof. Broderick Turner](https://marketing.pamplin.vt.edu/people/faculty/turner.html), [Darrell Owens](https://twitter.com/IDoTheThinking) and all the volunteers who alerted us on various manifestations of cropping biases via our [Cropping_bias Twitter handle](https://twitter.com/cropping_bias).
