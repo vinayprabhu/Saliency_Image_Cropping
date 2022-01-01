@@ -6,7 +6,10 @@ filename: index
 
 # Auditing Saliency Image Cropping
 
-26
+<button onclick="location.href='./paper_html/main.html'" type="button"> Read our WACV-2022 Paper</button>
+<!-- <button onclick="location.href='temp_del.md'" type="button">  Timeline of the project </button>
+<button onclick="location.href='./sub_pages/timeline.html'" type="button"> Twitter-Critique </button> -->
+
 [timeline](#timeline)
 
 
