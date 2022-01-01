@@ -1,7 +1,8 @@
-## Auditing Saliency Image Cropping
 <button onclick="location.href='./sub_pages/paper_html/main.html'" type="button"> WACV-2022 Paper</button>
 <button onclick="location.href='./sub_pages/timeline.html'" type="button">  Timeline of the project </button>
 <button onclick="location.href='./sub_pages/timeline.html'" type="button"> Twitter-Critique </button>
+
+# Auditing Saliency Image Cropping
 
 ![WACV-2022 Poster](./gallery/1384-wacv-poster.svg)
 
