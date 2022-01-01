@@ -6,7 +6,7 @@
 
 
 ## Table of contents
-check22 
+check23 
 - [Timeline](###timeline)
 - 
 
@@ -47,7 +47,9 @@ If you are a researcher with relevant expertise who’d like to join hands, feel
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT3nr80ooMkBfvq0QgX6Z-eV_pYVtQzR78kcqxVfgxqnasFut32YoxK52OiqE7wkyOzpUw2pF4eElJc/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ### Timeline
+
 | Date 	| Event 	|
+
 |:---:	|:---:	|
 | September 19, 2020 	|  🔭Discovery on Twitter and first simple set of experiments 🔬 	|
 | September 19, 2020 	|  ✍Created the @cropping_bias Twitter account to crowd-source the instances of offensive crops that informed our experiments 	|
