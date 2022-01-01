@@ -1,29 +1,66 @@
 ---
-title: pafatbn forever!
+title: 
 layout: template
 filename: index
 --- 
 
-# patrickandfrantonarethebestninjas
+# Auditing Saliency Image Cropping
 
-## Created by [Patrick Huston](http://www.patrickhuston.com/) and [Franton Lin](frantonlin.com)
+26
+[timeline](#timeline)
 
-#### What is patrickandfrantonarethebestninjas?
-This project aims to demonstrate without a doubt why Patrick and Franton are the best ninjas. 
 
-#### How can I use patrickandfrantonarethebestninjas?
-Come to office hours and git tutorials. Baked goods and cash are also accepted.
 
-#### Dependencies
-patrickandfrantonarethebestninjas depends heavily on the perception of students. A lot of research has been done looking into ways of monitoring and directly modifying how students perceive ninjas, and we have implemented this technology to the fullest extent. 
+For the past year, we have been investigating this murky yet fascinating tech called Saliency cropping that passively touches all our lives silently influencing the ways in which we encounter digital images on the world wide web.
 
-#### How to contribute?
-To contribute to patrickandfrantonarethebestninjas, write a heart-felt love note and submit a PR. 
+Sold under different monikers such as ‘AI assisted cropping’, ‘Smart cropping’ and  ‘Content aware cropping’, it has come to be extensively used by all the major digital content serving platforms such as Twitter, Facebook, Google, Microsoft, Apple etc that seek to deliver their image-laden content on a wide array of consumption devices of varying screen sizes, aspect ratios and viewing angles. 
 
-#### License
+While Twitter had to grapple with the downstream cropping biases experienced by its users in a very [public way](https://www.theguardian.com/technology/2020/sep/21/twitter-apologises-for-racist-image-cropping-algorithm) ultimately resulting in its removal, it continues to be deployed aggressively across the other platforms. 
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+We created this website to catalogue all our investigative efforts spanning 15 months, 3 continents, 2 papers, and, well, 2 COVID diagnoses :( .
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+This work would not have been possible without the incredible support of the following scholars:
+[AbuBakar Abid (Gradio)](https://twitter.com/abidlabs),  [Ali Abdalla (Gradio)](https://twitter.com/si3luwa), [Alexander Kroner](https://scholar.google.com/citations?user=hWKtP0sAAAAJ&hl=en), [Sang Han](https://github.com/jjangsangy), [Prof. Broderick Turner](https://marketing.pamplin.vt.edu/people/faculty/turner.html), [Darrell Owens](https://twitter.com/IDoTheThinking) and all the volunteers who alerted us on various manifestations of cropping biases via our [Cropping_bias Twitter handle](https://twitter.com/cropping_bias).
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+If you are a researcher with relevant expertise who’d like to join hands, feel free to contact us!
+
+![WACV-2022 Poster](./gallery/1384-wacv-poster.svg)
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BSHG0bIcNL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+
+
+
+
+### Presentation slides from WACV-2022
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQwhwiHbwW6eCiCoRTYWJ9kBzYzxwd2TWCrA7AIbqWilA9-Phiz3DKn_mnHMI2B2VtJ1Fan4DawUAOx/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+### Materials presented at the [CVPR-2021 workshop](https://sites.google.com/view/beyond-fairness-cv/accepted-papers?authuser=0)
+- [Paper](https://github.com/vinayprabhu/Saliency_Image_Cropping/blob/main/paper/%5Bpaper%5DIf%20saliency%20cropping%20is%20the%20answer%2C%20what%20is%20the%20question_CVPR_2021.pdf)
+- [Poster](https://github.com/vinayprabhu/Saliency_Image_Cropping/blob/main/paper/%5Bposter%5DIf%20saliency%20cropping%20is%20the%20answer%2C%20what%20is%20the%20question_CVPR_2021.pdf)
+- [Reviews](https://github.com/vinayprabhu/Saliency_Image_Cropping/blob/main/paper/Reviews_BeyondFairCV_2021_SIC.pdf)
+
+![Landscape CVPR-2021 workshop](./gallery/sic_landscape.png)
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT3nr80ooMkBfvq0QgX6Z-eV_pYVtQzR78kcqxVfgxqnasFut32YoxK52OiqE7wkyOzpUw2pF4eElJc/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+### Timeline
+
+| Date 	| Event 	|
+| September 19, 2020 	|  🔭Discovery on Twitter and first simple set of experiments 🔬 	|
+| September 19, 2020 	|  ✍Created the @cropping_bias Twitter account to crowd-source the instances of offensive crops that informed our experiments 	|
+| September 21, 2020 	|  ✍First blogpost titled ‘On the Twitter cropping controversy: Critique, clarifications & comments’  	|
+| October 2, 2020 	| ✍ Second blogpost on Scrutinizing Saliency-Based Image Cropping 	|
+| October 9, 2020 	| A 30 min discussion with 2 members of a ‘meta-team’ within Twitter 	|
+| April 2, 2021 	| 😍 ✍ First workshop paper submission to the BeyondFairCV workshop (as Submission 21) 	|
+| May 23, 2021 	| 😎 Acceptance notification (Original decision date was Apr 23, but got postponed on account of the pandemic)  	|
+| June 21, 2021 	| ✍ Submission of the camera-ready version of the paper to the organizers of the workshop 	|
+| June 25, 2021 	| 🙌 Paper presentation at the workshop via Discord 	|
+| August 11, 2021 	| ✍ Second paper submitted @ WACV-2022 (Round-2) 	|
+|  October 4, 2021 	| Acceptance notification at WACV-2022  🙌 	|
+| January 6, 2022 	|  😎 🎊 Paper + Poster presentation at WACV-2022   	|
