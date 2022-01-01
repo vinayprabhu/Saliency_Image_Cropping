@@ -1,5 +1,5 @@
 ---
-title: Summary
+title: Home
 layout: template
 filename: index
 --- 
@@ -7,15 +7,16 @@ filename: index
 # Auditing Saliency Image Cropping
 
 <button onclick="location.href='./paper_html/main.html'" type="button"> Read our WACV-2022 Paper (HTML) </button>
-<!-- <button onclick="location.href='temp_del.md'" type="button">  Timeline of the project </button>
-<button onclick="location.href='./sub_pages/timeline.html'" type="button"> Twitter-Critique </button> -->
 
+# Table of Contents
+- [Summary](#summary)
 - [Timeline](#timeline)
-- [Acknowledgements](#Acknowledgements)
+- [Acknowledgements](#acknowledgements)
 - [Video](#video)
+- [Slides](#presentation)
 
 
-
+## Summary
 For the past year, we have been investigating this murky yet fascinating tech called Saliency cropping that passively touches all our lives silently influencing the ways in which we encounter digital images on the world wide web.
 
 Sold under different monikers such as ‘AI assisted cropping’, ‘Smart cropping’ and  ‘Content aware cropping’, it has come to be extensively used by all the major digital content serving platforms such as Twitter, Facebook, Google, Microsoft, Apple etc that seek to deliver their image-laden content on a wide array of consumption devices of varying screen sizes, aspect ratios and viewing angles. 
@@ -28,28 +29,11 @@ If you are a researcher with relevant expertise who’d like to join hands, feel
 ## Poster
 ![WACV-2022 Poster](./gallery/1384-wacv-poster.svg)
 
-
 ## Video
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BSHG0bIcNL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
-
-
-
-
-
-
-### Presentation slides from WACV-2022
+## Presentation
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQwhwiHbwW6eCiCoRTYWJ9kBzYzxwd2TWCrA7AIbqWilA9-Phiz3DKn_mnHMI2B2VtJ1Fan4DawUAOx/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-### Materials presented at the [CVPR-2021 workshop](https://sites.google.com/view/beyond-fairness-cv/accepted-papers?authuser=0)
-- [Paper](https://github.com/vinayprabhu/Saliency_Image_Cropping/blob/main/paper/%5Bpaper%5DIf%20saliency%20cropping%20is%20the%20answer%2C%20what%20is%20the%20question_CVPR_2021.pdf)
-- [Poster](https://github.com/vinayprabhu/Saliency_Image_Cropping/blob/main/paper/%5Bposter%5DIf%20saliency%20cropping%20is%20the%20answer%2C%20what%20is%20the%20question_CVPR_2021.pdf)
-- [Reviews](https://github.com/vinayprabhu/Saliency_Image_Cropping/blob/main/paper/Reviews_BeyondFairCV_2021_SIC.pdf)
-
-![Landscape CVPR-2021 workshop](./gallery/sic_landscape.png)
-
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT3nr80ooMkBfvq0QgX6Z-eV_pYVtQzR78kcqxVfgxqnasFut32YoxK52OiqE7wkyOzpUw2pF4eElJc/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Timeline
 
