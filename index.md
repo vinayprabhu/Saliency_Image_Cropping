@@ -1,6 +1,9 @@
 ## Auditing Saliency Image Cropping
 
 This webpage 
+
+![Alt text here](./gallery/1384-wacv-poster.svg)
+
 <!-- We had tons of experimental data that we have no bandwidth to scrutinize carefully. Feel free to reach out and we'd be extremely happy to share these with you! Open sourcing all aspects of our timeline and learnings, along with the feedback and learnings. Also, we deem it prudent to share the reviews as well  -->
 
 You can use the [editor on GitHub](https://github.com/vinayprabhu/Saliency_Image_Cropping/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
