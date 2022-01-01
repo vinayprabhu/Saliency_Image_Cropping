@@ -1,6 +1,6 @@
 Our WACV-2022 paper📜 spans two experiments 🥼:
 
-- Male-gaze-like (MGL) experiments with 336 images drawn from Flickr
+- Male-gaze-like (MGL) experiments with 336 images drawn from Flickr 🖼️
 - Race-Gender (RG) experiments using images from the Chicago Faces dataset (CFD)
 
 As such, we have two files associated each of the two experiments each:
