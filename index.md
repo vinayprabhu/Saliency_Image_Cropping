@@ -6,7 +6,7 @@
 
 
 ## Table of contents
-check23 
+check24 
 - [Timeline](###timeline)
 - 
 
@@ -50,7 +50,6 @@ If you are a researcher with relevant expertise who’d like to join hands, feel
 
 | Date 	| Event 	|
 
-|:---:	|:---:	|
 | September 19, 2020 	|  🔭Discovery on Twitter and first simple set of experiments 🔬 	|
 | September 19, 2020 	|  ✍Created the @cropping_bias Twitter account to crowd-source the instances of offensive crops that informed our experiments 	|
 | September 21, 2020 	|  ✍First blogpost titled ‘On the Twitter cropping controversy: Critique, clarifications & comments’  	|
