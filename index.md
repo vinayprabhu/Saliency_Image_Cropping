@@ -3,6 +3,15 @@
 <button onclick="location.href='./sub_pages/timeline.html'" type="button"> Twitter-Critique </button>
 
 # Auditing Saliency Image Cropping
+For the past year, we have been investigating this murky yet fascinating tech called Saliency cropping that passively touches all our lives silently influencing the ways in which we encounter digital images on the world wide web.
+
+Sold under different monikers such as ‘AI assisted cropping’, ‘Smart cropping’ and  ‘Content aware cropping’, it has come to be extensively used by all the major digital content serving platforms such as Twitter, Facebook, Google, Microsoft, Apple etc that seek to deliver their image-laden content on a wide array of consumption devices of varying screen sizes, aspect ratios and viewing angles. 
+
+While Twitter had to grapple with the downstream cropping biases experienced by its users in a very [public way](https://www.theguardian.com/technology/2020/sep/21/twitter-apologises-for-racist-image-cropping-algorithm) ultimately resulting in its removal, it continues to be deployed aggressively across the other platforms. 
+
+We created this website to catalogue all our investigative efforts spanning 15 months, 3 continents, 2 papers, and, well, 2 COVID diagnoses :( .
+
+If you are a researcher with relevant expertise who’d like to join hands, feel free to contact us!
 
 ![WACV-2022 Poster](./gallery/1384-wacv-poster.svg)
 
