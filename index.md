@@ -3,6 +3,8 @@
 <button onclick="location.href='./sub_pages/timeline.html'" type="button"> Twitter-Critique </button>
 
 # Auditing Saliency Image Cropping
+## Table of contents
+- [Custom foo description](#foo)
 For the past year, we have been investigating this murky yet fascinating tech called Saliency cropping that passively touches all our lives silently influencing the ways in which we encounter digital images on the world wide web.
 
 Sold under different monikers such as ‘AI assisted cropping’, ‘Smart cropping’ and  ‘Content aware cropping’, it has come to be extensively used by all the major digital content serving platforms such as Twitter, Facebook, Google, Microsoft, Apple etc that seek to deliver their image-laden content on a wide array of consumption devices of varying screen sizes, aspect ratios and viewing angles. 
@@ -30,7 +32,7 @@ If you are a researcher with relevant expertise who’d like to join hands, feel
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQwhwiHbwW6eCiCoRTYWJ9kBzYzxwd2TWCrA7AIbqWilA9-Phiz3DKn_mnHMI2B2VtJ1Fan4DawUAOx/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ### Materials presented at the [CVPR-2021 workshop](https://sites.google.com/view/beyond-fairness-cv/accepted-papers?authuser=0)
-![Landscape CVPR-2021 workshop](./gallery/sic_landscape.svg)
+![Landscape CVPR-2021 workshop](./gallery/sic_landscape.png)
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT3nr80ooMkBfvq0QgX6Z-eV_pYVtQzR78kcqxVfgxqnasFut32YoxK52OiqE7wkyOzpUw2pF4eElJc/embed?start=true&loop=true&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
