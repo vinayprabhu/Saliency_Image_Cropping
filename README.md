@@ -1,13 +1,13 @@
 # Saliency_Image_Cropping
 
-This is the companion Github repo to our WACV-2022 paper titled _Auditing Saliency Cropping_.
+This is the companion Github repo to our WACV-2022 paper titled _Auditing Saliency Cropping_. Here is the [Companion website](https://vinayprabhu.github.io/Saliency_Image_Cropping/).
 
 Contributors:
 - [Abeba Birhane](https://abebabirhane.github.io/)
 - [John Whaley](https://github.com/joewhaley)
 - [Vinay Uday Prabhu](https://github.com/vinayprabhu)
 
-[Companion website](https://vinayprabhu.github.io/Saliency_Image_Cropping/) 
+
 
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" height=22.5></a>  
 <a href="https://youtu.be/BSHG0bIcNL0"><img src="https://img.shields.io/static/v1?label=WACV 2022&message=5 Minute Video&color=red" height=22.5></a>  
