@@ -5,4 +5,4 @@
 <a href="https://youtu.be/BSHG0bIcNL0"><img src="https://img.shields.io/static/v1?label=WACV 2022&message=5 Minute Video&color=red" height=22.5></a>  
 <a href="http://colab.research.google.com/github/vinayprabhu/Saliency_Image_Cropping/blob/main/code/notebooks/Notebook_0_walkthrough_obamamcconnell.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" height=22.5></a>  
 
-[![Open All Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vinayprabhu/Saliency_Image_Cropping/blob/main/code/notebooks) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vinayprabhu/Saliency_Image_Cropping/blob/main/code/notebooks/HEAD)
+[![Open All Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vinayprabhu/Saliency_Image_Cropping/blob/main/) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vinayprabhu/Saliency_Image_Cropping/blob/main/HEAD)
