@@ -40,19 +40,19 @@ In the coming week(s), we will be sharing all the code and a whole slew of exper
 
 | Date 	| Event 	|
 | September 19, 2020 	|  🔭Discovery on Twitter and first simple set of experiments 🔬 	|
-| September 19, 2020 	|  ✍Created the @cropping_bias Twitter account to crowd-source the instances of offensive crops that informed our experiments 	|
-| September 21, 2020 	|  ✍First blogpost titled ‘On the Twitter cropping controversy: Critique, clarifications & comments’  	|
-| October 2, 2020 	| ✍ Second blogpost on Scrutinizing Saliency-Based Image Cropping 	|
+| September 19, 2020 	|  ✍Created the [@cropping_bias](https://twitter.com/cropping_bias) Twitter account to crowd-source the instances of offensive crops that informed our experiments 	|
+| September 21, 2020 	|  ✍First [blogpost](https://vinayprabhu.medium.com/on-the-twitter-cropping-controversy-critique-clarifications-and-comments-7ac66154f687) titled ‘On the Twitter cropping controversy: Critique, clarifications & comments’  	|
+| October 2, 2020 	| ✍ Second [blogpost](https://vinayprabhu.medium.com/scrutinizing-saliency-based-image-cropping-6b7a70cfb4f1) on Scrutinizing Saliency-Based Image Cropping 	|
 | October 9, 2020 	| A 30 min discussion with 2 members of a ‘meta-team’ within Twitter 	|
-| April 2, 2021 	| 😍 ✍ First workshop paper submission to the BeyondFairCV workshop (as Submission 21) 	|
+| April 2, 2021 	| 😍 ✍ First workshop paper submission to the [BeyondFairCV](https://sites.google.com/view/beyond-fairness-cv/home) workshop (as Submission 21) 	|
 | May 23, 2021 	| 😎 Acceptance notification (Original decision date was Apr 23, but got postponed on account of the pandemic)  	|
 | June 21, 2021 	| ✍ Submission of the camera-ready version of the paper to the organizers of the workshop 	|
-| June 25, 2021 	| 🙌 Paper presentation at the workshop via Discord 	|
+| June 25, 2021 	| 🙌 Paper presentation at the [workshop](https://sites.google.com/view/beyond-fairness-cv/home) via Discord 	|
 | August 11, 2021 	| ✍ Second paper submitted @ WACV-2022 (Round-2) 	|
 |  October 4, 2021 	| Acceptance notification at WACV-2022  🙌 	|
-| January 6, 2022 	|  😎 🎊 Paper + Poster presentation at WACV-2022   	|
+| January 6, 2022 	|  😎 🎊 Paper + Poster presentation at [WACV-2022](https://wacv2022.thecvf.com/home)   	|
 
 ## Acknowledgements
 
 This work would not have been possible without the incredible support of the following scholars:
-[AbuBakar Abid (Gradio)](https://twitter.com/abidlabs),  [Ali Abdalla (Gradio)](https://twitter.com/si3luwa), [Alexander Kroner](https://scholar.google.com/citations?user=hWKtP0sAAAAJ&hl=en), [Sang Han](https://github.com/jjangsangy), [Prof. Broderick Turner](https://marketing.pamplin.vt.edu/people/faculty/turner.html), [Darrell Owens](https://twitter.com/IDoTheThinking), the organizers of the BeyondFairCV CVPR-2021 worksjop and the attendees who gave us crucial feedback and all the volunteers who alerted us on various manifestations of cropping biases via our [Cropping_bias Twitter handle](https://twitter.com/cropping_bias).
+[AbuBakar Abid (Gradio)](https://twitter.com/abidlabs),  [Ali Abdalla (Gradio)](https://twitter.com/si3luwa), [Alexander Kroner](https://scholar.google.com/citations?user=hWKtP0sAAAAJ&hl=en), [Sang Han](https://github.com/jjangsangy), [Prof. Broderick Turner](https://marketing.pamplin.vt.edu/people/faculty/turner.html), [Darrell Owens](https://twitter.com/IDoTheThinking), the organizers of the BeyondFairCV CVPR-2021 workshop, the attendees who gave us crucial feedback and all the volunteers who alerted us on various manifestations of cropping biases via our [Cropping_bias Twitter handle](https://twitter.com/cropping_bias) and help with the hand-annotations in our experiments.
