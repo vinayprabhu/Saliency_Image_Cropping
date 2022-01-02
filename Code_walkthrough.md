@@ -1,7 +1,7 @@
 ---
 title: Methodology
 layout: template
-filename: code_walkthrough
+filename: Code_walkthrough
 --- 
 
 # Goal of the notebook
