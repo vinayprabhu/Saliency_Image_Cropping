@@ -27,10 +27,11 @@ In order to ensure transparency, we are sharing the reviews provided by the anon
 In the coming week(s), we will be sharing all the code and a whole slew of experimental results that did not make it to either of our two papers. It is our goal to eventually summarize all our findings into a single monologue. If you are a researcher with relevant expertise who’d like to join hands, feel free to contact us 🤗
 
 ## Poster
-![WACV-2022 Poster](./gallery/1384-wacv-poster.svg)
+<!-- ![WACV-2022 Poster](./gallery/1384-wacv-poster.svg) -->
+<img src="./gallery/1384-wacv-poster.svg" alt="WACV-2022 Poster" width="480" height="299"/>
 
 ## Video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BSHG0bIcNL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="480" height="299" src="https://www.youtube.com/embed/BSHG0bIcNL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Presentation
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQwhwiHbwW6eCiCoRTYWJ9kBzYzxwd2TWCrA7AIbqWilA9-Phiz3DKn_mnHMI2B2VtJ1Fan4DawUAOx/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
