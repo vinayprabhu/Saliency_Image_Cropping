@@ -6,6 +6,6 @@
 
 
 ## Abbreviations used
-SIC: Saliency Image cropping
-CFD: Chicago Faces Dataset
-MGL: Male Gaze Like
+- SIC: Saliency Image cropping
+- CFD: Chicago Faces Dataset
+- MGL: Male Gaze Like
