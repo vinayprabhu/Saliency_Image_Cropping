@@ -1,6 +1,7 @@
 # Saliency_Image_Cropping
 
 This is the companion Github repo to our WACV-2022 paper titled _Auditing Saliency Cropping_. Here is the [Companion website](https://vinayprabhu.github.io/Saliency_Image_Cropping/).
+![Poster](https://github.com/vinayprabhu/Saliency_Image_Cropping/raw/gh-pages/gallery/1384-wacv-poster.svg)
 
 Contributors:
 - [Abeba Birhane](https://abebabirhane.github.io/)
@@ -23,3 +24,5 @@ Contributors:
 | ------------- | ------------- | ------------- |
 | Notebook_0_data_descr| Describes the 2 data-frames produced by the two experiments (MGL+CFD)| <a href="http://colab.research.google.com/github/vinayprabhu/Saliency_Image_Cropping/blob/main/code/notebooks/Notebook_0_data_descr.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" height=22.5></a>|
 | Notebook_0_walkthrough_obamamcconnell| Walks you through how an image is processed through the 3 frameworks|<a href="http://colab.research.google.com/github/vinayprabhu/Saliency_Image_Cropping/blob/main/code/notebooks/Notebook_0_walkthrough_obamamcconnell.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" height=22.5></a>|
+
+![Poster](https://github.com/vinayprabhu/Saliency_Image_Cropping/raw/gh-pages/gallery/SIC_Obama_McConnell.svg)
