@@ -1,6 +1,12 @@
-# Goal
+---
+title: Methodology
+layout: template
+filename: code_walkthrough
+--- 
 
-To walk the reader through all the 3 saliency cropping frameworks we have audited in our [paper](https://vinayprabhu.github.io/Saliency_Image_Cropping/). We hope this will provide a clear insight into how we constructed a _common ground_ for evaluating all the 3 frameworks.
+# Goal of the notebook
+
+To walk the reader through the methodology used with regards to the 3 saliency cropping frameworks we have audited in our [paper](https://vinayprabhu.github.io/Saliency_Image_Cropping/). We hope this will provide a clear insight into how we constructed a _common ground_ for evaluating all these 3 frameworks.
 
 In doing so, we also hope to educate the general audience on the fate of the infamous Obama-McConnell image (https://www.theguardian.com/technology/2020/sep/21/twitter-apologises-for-racist-image-cropping-algorithm) when passed through the Saliency cropping frameworks of Twitter, Google and Apple.
  
