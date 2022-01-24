@@ -57,7 +57,7 @@ What should the 'ground truth' look like given that there's exists rigorous doma
 7. Fate of imagenet trained models trained with 1001 nodes where 1001th node is the ‘background’ node which is trained as follows:
 Take all the images in the training set and blur out the salient part of the image that contains the class object. All that now remains (ideally) is the background in the image. Label these to be belonging to class 1001 (or background class) and train a new model. Compare this model with a baseline model for a given OOD image test set and see if the baseline model is more OOD-susceptible.
 
-8. Saliency estimation via cosine scoore proxies: Given an (image, text description) pair, shard the image into sub-images. For each sub-image generate caption and compute cosine distance with the true textual description. That cosine distance will serve to be a proxy for saliency score for that sub-image or patch.
+8. Saliency estimation via cosine score proxies: Given an (image, text description) pair, shard the image into sub-images. For each sub-image generate caption and compute cosine distance with the true textual description. That cosine distance will serve to be a proxy for saliency score for that sub-image or patch.
 Replace random patches in papers such as FARL with saliency-1/saliency-2 patches to force the neural network to learn the fine-grained features better.
  
 
