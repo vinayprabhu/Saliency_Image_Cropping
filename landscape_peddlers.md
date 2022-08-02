@@ -1,7 +1,7 @@
 ---
 title: The landscape of peddlers
 layout: template
-filename: landscape_peddlers.md
+filename: landscape_peddlers
 --- 
 # Introduction
 These are the institutions, labs, startups and individual developers as per Aug 1 2022 who are shilling their variant of Saliency Image Cropping algorithms. The 'Claims' column contents are copy-pasted verbatim from the URLs
