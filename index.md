@@ -7,6 +7,8 @@ filename: index
 # Auditing Saliency Image Cropping
 
 <button onclick="location.href='./paper_html/main.html'" type="button"> Read our WACV-2022 Paper (HTML) </button>
+
+## Landscape of deployment (Updated Aug 1, 2022)
 <button onclick="location.href='./landscape_html/landscape.html'" type="button"> Who is shilling this tech? </button>
 # Table of Contents
 - [Summary](#summary)
