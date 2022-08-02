@@ -51,6 +51,7 @@ In the coming week(s), we will be sharing all the code and a whole slew of exper
 | August 11, 2021 	| ✍ Second paper submitted @ WACV-2022 (Round-2) 	|
 |  October 4, 2021 	| Acceptance notification at WACV-2022  🙌 	|
 | January 6, 2022 	|  😎 🎊 Paper + Poster presentation at [WACV-2022](https://wacv2022.thecvf.com/home)   	|
+| August 1, 2022 	|  👉 Updated the landscape of current real-world deployments [Landscape](https://vinayprabhu.github.io/Saliency_Image_Cropping/landscape_peddlers.md)   	|
 
 ## Acknowledgements
 
