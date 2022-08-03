@@ -10,6 +10,12 @@ filename: index
 
 ## Landscape of deployment (Updated Aug 1, 2022)
 <button onclick="location.href='./landscape_html/landscape.html'" type="button"> Who is shilling this tech? </button>
+
+## Coverage in the Feb 2022 issue of the RSIP-Vision magazine
+
+    <iframe src="/gallery/Feb2022_rsipvision.pdf" width="100%" height="500px">
+    </iframe>
+
 # Table of Contents
 - [Summary](#summary)
 - [Timeline](#timeline)
@@ -53,6 +59,7 @@ In the coming week(s), we will be sharing all the code and a whole slew of exper
 | August 11, 2021 	| ✍ Second paper submitted @ WACV-2022 (Round-2) 	|
 |  October 4, 2021 	| Acceptance notification at WACV-2022  🙌 	|
 | January 6, 2022 	|  😎 🎊 Paper + Poster presentation at [WACV-2022](https://wacv2022.thecvf.com/home)   	|
+| February 6, 2022 	|  😎🙌  WACV 2022 paper as part of the [Feb issue](https://www.rsipvision.com/ComputerVisionNews-2022February/10/) of the RSIP vision magazine 	|
 | August 1, 2022 	|  👉 Updated the landscape of current real-world deployments  	|
 
 ## Acknowledgements
