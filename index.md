@@ -11,7 +11,7 @@ filename: index
 ## Landscape of deployment (Updated Aug 1, 2022)
 <button onclick="location.href='./landscape_html/landscape.html'" type="button"> Who is shilling this tech? </button>
 
-## Coverage in the Feb 2022 issue of the RSIP-Vision magazine
+## 🥂🥳 Coverage in the Feb 2022 issue of the RSIP-Vision magazine 📰
 
 <iframe src="./gallery/Feb2022_rsipvision.pdf" width="100%" height="500px">
 </iframe>
