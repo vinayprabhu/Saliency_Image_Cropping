@@ -13,8 +13,10 @@ filename: index
 
 ## Coverage in the Feb 2022 issue of the RSIP-Vision magazine
 
-    <iframe src="/gallery/Feb2022_rsipvision.pdf" width="100%" height="500px">
-    </iframe>
+<iframe src="/gallery/Feb2022_rsipvision.pdf" width="100%" height="500px">
+</iframe>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQwhwiHbwW6eCiCoRTYWJ9kBzYzxwd2TWCrA7AIbqWilA9-Phiz3DKn_mnHMI2B2VtJ1Fan4DawUAOx/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 # Table of Contents
 - [Summary](#summary)
