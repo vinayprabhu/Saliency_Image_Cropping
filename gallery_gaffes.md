@@ -8,18 +8,18 @@ filename: gallery_gaffes
 
 ## What if the Obama-McConnell image had met with a different SIC pipeline?
 
-![](.gallery/om_acad.png)
+![](./gallery/om_acad.png)
 
-![](.gallery/post_pixelation.png)
+![](./gallery/post_pixelation.png)
 
-![](.gallery/1a_pixelation.png)
+![](./gallery/1a_pixelation.png)
 
-![](.gallery/seam_carving_2.png)
+![](./gallery/seam_carving_2.png)
 
 ## Err...Was Korner et al's model 'better'? Regression examples
-![](.gallery/cfd_twitter_gradio.png)
+![](./gallery/cfd_twitter_gradio.png)
 
-![](.gallery/7_regression_examples_blurred.png)
+![](./gallery/7_regression_examples_blurred.png)
 
 
 ## Male gaze via the 'centering' effect?
