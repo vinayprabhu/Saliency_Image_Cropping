@@ -6,7 +6,7 @@ filename: gallery_gaffes
 
 # Gallery of Gaffes
 
-## What is the Obama-McConnell image had met with a different SIC pipeline?
+## What if the Obama-McConnell image had met with a different SIC pipeline?
 
 ![](.gallery/om_acad.png)
 
