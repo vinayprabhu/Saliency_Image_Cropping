@@ -43,7 +43,7 @@ Trapped between the Top-Down and Bottom-Up saliency worlds :'(
 ## [Photobomb defusal expert](https://ieeexplore.ieee.org/document/8454255) eh?
 ![](./gallery/8_same_pic_twice.png)
 
-## Volte-face this fast muh dudes ;)?
+## The volte-face ;)?
 ![](./gallery/verge_coverage.png)
 
 
