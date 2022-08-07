@@ -4,6 +4,17 @@ layout: template
 filename: index
 --- 
 
+<table border="1">
+ <tr>
+    <td><b style="font-size:30px">Read our WACV-2022 Paper (HTML)</b></td>
+    <td><b style="font-size:30px">Who is shilling this tech?</b></td>
+ </tr>
+ <tr>
+    <td><button onclick="location.href='./paper_html/main.html'" type="button"> Read our WACV-2022 Paper (HTML) </button></td>
+    <td><button onclick="location.href='./landscape_html/landscape.html'" type="button"> Who is shilling this tech? </button></td>
+ </tr>
+</table>
+
 # Auditing Saliency Image Cropping
 
 <button onclick="location.href='./paper_html/main.html'" type="button"> Read our WACV-2022 Paper (HTML) </button>
