@@ -19,7 +19,7 @@ filename: gallery_gaffes
 ## Err...Was Korner et al's model 'better'? Regression examples
 ![](.gallery/cfd_twitter_gradio.png)
 
-![](./gallery/regression.jpg)
+![](.gallery/7_regression_examples_blurred.png)
 
 
 ## Male gaze via the 'centering' effect?
@@ -39,7 +39,7 @@ Trapped between the Top-Down and Bottom-Up saliency worlds :'(
 
 
 
-![](.gallery/7_regression_examples_blurred.png)
+
 
 
 
