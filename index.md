@@ -44,14 +44,14 @@ In the coming week(s), we will be sharing all the code and a whole slew of exper
 ## Poster-Video-Slides
 <table border="1">
  <tr>
-    <td><b style="font-size:45px">Poster</b></td>
+    <td><b style="font-size:30px">Poster</b></td>
     <td><b style="font-size:30px">Video</b></td>
     <td><b style="font-size:30px">Slides</b></td>
  </tr>
  <tr>
     <td><!-- ![WACV-2022 Poster](./gallery/1384-wacv-poster.svg) -->
 <img src="./gallery/1384-wacv-poster.svg" alt="WACV-2022 Poster" width="480" height="299"/></td>
-    <td><iframe width="360" height="200" src="https://www.youtube.com/embed/BSHG0bIcNL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+    <td><iframe width="300" height="200" src="https://www.youtube.com/embed/BSHG0bIcNL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
   <td><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQwhwiHbwW6eCiCoRTYWJ9kBzYzxwd2TWCrA7AIbqWilA9-Phiz3DKn_mnHMI2B2VtJ1Fan4DawUAOx/embed?start=false&loop=false&delayms=60000" frameborder="0" width="360" height="200" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
   </td>
  </tr>
