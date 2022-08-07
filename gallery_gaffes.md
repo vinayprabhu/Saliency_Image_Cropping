@@ -11,7 +11,7 @@ filename: gallery_gaffes
 1: Korner et al's model favored McConneln as well!
 ![Obama-McConnell image](./gallery/om_acad.png)
 
-2: Adversarial vulnerability test-1. What is I _mildly_ pixelated their faces? 
+2: Adversarial vulnerability test-1. What if I _mildly_ pixelated their faces? 
 Would it flip the fate of the cropped image?
 
 ![](./gallery/1a_pixelation.png)
