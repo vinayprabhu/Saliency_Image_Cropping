@@ -11,16 +11,9 @@ filename: index
  </tr>
  <tr>
     <td><button onclick="location.href='./paper_html/main.html'" type="button"> Read our WACV-2022 Paper (HTML) </button></td>
-    <td><button onclick="location.href='./landscape_html/landscape.html'" type="button"> Who is shilling this tech? </button></td>
+    <td><button onclick="location.href='./landscape_html/landscape.html'" type="button"> Landscape (Aug 2022) </button></td>
  </tr>
 </table>
-
-# Auditing Saliency Image Cropping
-
-<button onclick="location.href='./paper_html/main.html'" type="button"> Read our WACV-2022 Paper (HTML) </button>
-
-## Landscape of deployment (Updated Aug 1, 2022)
-<button onclick="location.href='./landscape_html/landscape.html'" type="button"> Who is shilling this tech? </button>
 
 ## 🥂🥳 Coverage in the Feb 2022 issue of the RSIP-Vision magazine 📰
 
@@ -46,6 +39,20 @@ It captures much of our efforts in the period spanning Sep 2020 to Nov 2021 (See
 
 In order to ensure transparency, we are sharing the reviews provided by the anonymous reviewers at the CVPR-2021 workshop and WACV [here](https://github.com/vinayprabhu/Saliency_Image_Cropping/tree/main/paper). 
 In the coming week(s), we will be sharing all the code and a whole slew of experimental results that did not make it to either of our two papers. It is our goal to eventually summarize all our findings into a single monologue. If you are a researcher with relevant expertise who’d like to join hands, feel free to contact us 🤗
+
+<table border="1">
+ <tr>
+    <td><b style="font-size:30px">Poster</b></td>
+    <td><b style="font-size:30px">Video</b></td>
+ </tr>
+ <tr>
+    <td><!-- ![WACV-2022 Poster](./gallery/1384-wacv-poster.svg) -->
+<img src="./gallery/1384-wacv-poster.svg" alt="WACV-2022 Poster" width="480" height="299"/></td>
+    <td><iframe width="480" height="299" src="https://www.youtube.com/embed/BSHG0bIcNL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+ </tr>
+</table>
+
+
 
 ## Poster
 <!-- ![WACV-2022 Poster](./gallery/1384-wacv-poster.svg) -->
