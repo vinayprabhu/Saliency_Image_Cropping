@@ -64,6 +64,12 @@ In the coming week(s), we will be sharing all the code and a whole slew of exper
 | February 6, 2022 	|  😎🙌  WACV 2022 paper as part of the [Feb issue](https://www.rsipvision.com/ComputerVisionNews-2022February/10/) of the RSIP vision magazine 	|
 | August 1, 2022 	|  👉 Updated the landscape of current real-world deployments  	|
 
+## List of publically available interactive demos
+
+1. [Seam Carving](https://trekhleb.dev/blog/2021/content-aware-image-resizing-in-javascript/)
+2. [SALICON DEMO](http://salicon.net/demo/)
+3. [smartcrop.js testbed](https://29a.ch/sandbox/2014/smartcrop/examples/testbed.html)
+
 ## Acknowledgements
 
 This work would not have been possible without the incredible support of the following scholars:
