@@ -24,10 +24,10 @@ filename: index
 
 # Table of Contents
 - [Summary](#summary)
+- [Poster-Video-Slides](#Poster-Video-Slides)
 - [Timeline](#timeline)
 - [Acknowledgements](#acknowledgements)
-- [Poster-Video-Slides](#Poster-Video-Slides)
-- [Slides](#presentation)
+
 
 
 ## Summary
