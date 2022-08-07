@@ -24,7 +24,7 @@ filename: index
 
 # Table of Contents
 - [Summary](#summary)
-- [Poster-Video-Slides](#Poster-Video-Slides)
+- [Video-Slides](#video-slides)
 - [Timeline](#timeline)
 - [Interactive Demos](#interactive-demos)
 - [Acknowledgements](#acknowledgements)
@@ -41,18 +41,15 @@ It captures much of our efforts in the period spanning Sep 2020 to Nov 2021 (See
 In order to ensure transparency, we are sharing the reviews provided by the anonymous reviewers at the CVPR-2021 workshop and WACV [here](https://github.com/vinayprabhu/Saliency_Image_Cropping/tree/main/paper). 
 In the coming week(s), we will be sharing all the code and a whole slew of experimental results that did not make it to either of our two papers. It is our goal to eventually summarize all our findings into a single monologue. If you are a researcher with relevant expertise who’d like to join hands, feel free to contact us 🤗
 
-## Poster-Video-Slides
+## Video-Slides
 <table border="1">
  <tr>
-    <td><b style="font-size:30px">Poster</b></td>
     <td><b style="font-size:30px">Video</b></td>
     <td><b style="font-size:30px">Slides</b></td>
  </tr>
  <tr>
-    <td><!-- ![WACV-2022 Poster](./gallery/1384-wacv-poster.svg) -->
-<img src="./gallery/1384-wacv-poster.svg" alt="WACV-2022 Poster" width="480" height="299"/></td>
-    <td><iframe width="300" height="200" src="https://www.youtube.com/embed/BSHG0bIcNL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
-  <td><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQwhwiHbwW6eCiCoRTYWJ9kBzYzxwd2TWCrA7AIbqWilA9-Phiz3DKn_mnHMI2B2VtJ1Fan4DawUAOx/embed?start=false&loop=false&delayms=60000" frameborder="0" width="360" height="200" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <td><iframe width="480" height="299" src="https://www.youtube.com/embed/BSHG0bIcNL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+  <td><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQwhwiHbwW6eCiCoRTYWJ9kBzYzxwd2TWCrA7AIbqWilA9-Phiz3DKn_mnHMI2B2VtJ1Fan4DawUAOx/embed?start=false&loop=false&delayms=60000" frameborder="0" width=480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
   </td>
  </tr>
 </table>
@@ -62,12 +59,6 @@ In the coming week(s), we will be sharing all the code and a whole slew of exper
 ## Poster
 <!-- ![WACV-2022 Poster](./gallery/1384-wacv-poster.svg) -->
 <img src="./gallery/1384-wacv-poster.svg" alt="WACV-2022 Poster" width="480" height="299"/>
-
-## Video
-<iframe width="480" height="299" src="https://www.youtube.com/embed/BSHG0bIcNL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-## Presentation
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQwhwiHbwW6eCiCoRTYWJ9kBzYzxwd2TWCrA7AIbqWilA9-Phiz3DKn_mnHMI2B2VtJ1Fan4DawUAOx/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Timeline
 
